@@ -37,6 +37,8 @@ classical construction and absence of a novelty claim.
 3. Dispatch the **Palomar mechanical preflight** workflow with that exact SHA.
    It calls Palomar's pinned reusable verifier with `mode: full` and
    `execution_profile: palomar-standard-v1`; configuration is `comparator.json`.
+   The caller uses the required twelve-character alphanumeric request ID and
+   records authorization from the confirmed responsible maintainer.
    Retain the run URL and mechanical report. Proceed only when its status is
    `pass`. A build, axiom report or standalone Comparator run is insufficient.
 4. Before intake, confirm the repository, exact SHA, configuration and the
