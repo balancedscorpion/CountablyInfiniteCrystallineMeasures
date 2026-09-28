@@ -15,7 +15,7 @@ jobs:
   verify:
     uses: PalomarRegistry/PalomarSubmission/.github/workflows/submission.yml@65f0154ed776cd26c224254aa57b379137f28b0d
     with:
-      repository: balancedscorpion/CountablyInfiniteCrystallineMeasures
+      repository: ${{ github.repository }}
       commit: ${{ inputs.commit }}
       pipeline_commit: 65f0154ed776cd26c224254aa57b379137f28b0d
       request_id: cardinal0001

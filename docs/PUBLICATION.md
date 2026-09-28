@@ -31,14 +31,15 @@ classical construction and absence of a novelty claim.
 ## Verification and submission
 
 1. Finish the local build and checks. Commit the complete source and metadata.
-2. Make `balancedscorpion/CountablyInfiniteCrystallineMeasures` public and push
+2. Confirm that the submission repository is public and push
    the reviewed snapshot. Public visibility is required for Palomar to fetch
    and preserve the source. Check that the recorded commit is available.
 3. Dispatch the **Palomar mechanical preflight** workflow with that exact SHA.
    It calls Palomar's pinned reusable verifier with `mode: full` and
    `execution_profile: palomar-standard-v1`; configuration is `comparator.json`.
    The caller uses the required twelve-character alphanumeric request ID and
-   records authorization from the confirmed responsible maintainer.
+   records authorization from the confirmed responsible maintainer. It takes the
+   repository name from GitHub so later renames do not leave a stale caller.
    Retain the run URL and mechanical report. Proceed only when its status is
    `pass`. A build, axiom report or standalone Comparator run is insufficient.
 4. Before intake, confirm the repository, exact SHA, configuration and the
