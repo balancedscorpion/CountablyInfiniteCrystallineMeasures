@@ -4,12 +4,12 @@ defaultTargets = ["Challenge", "Solution"]
 
 [[require]]
 name = "TauCeti"
-git = "https://github.com/TauCetiProject/TauCeti.git"
+git = "https://github.com/TauCetiProject/TauCeti"
 rev = "b133ddab71aaffc60efffbf344ceca878c954f14"
 
 [[require]]
 name = "mathlib"
-git = "https://github.com/leanprover-community/mathlib4.git"
+git = "https://github.com/leanprover-community/mathlib4"
 rev = "d870b9068518a0870842d15a0cd42637ec30b587"
 
 [[lean_lib]]
