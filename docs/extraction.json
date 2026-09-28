@@ -1,0 +1,2054 @@
+{
+  "repository": "https://github.com/ls558/MeyerGeneralProblem",
+  "revision": "aad158a9f4ba3c4db52385ef1856a918edc22c83",
+  "entry_module": "MeyerGeneralProblem.Cardinal.Adaptive.ConstructedAlgebraicBasis",
+  "claim": "target-cardinal-closure",
+  "contract_sha256": "02d8c18d9acada486a25df5faa90c01491b0160c8a1133c5f93c0e87517363ca",
+  "files": [
+    {
+      "path": "MeyerGeneralProblem/Atomic/BesselSynthesis.lean",
+      "source_path": "lean/MeyerGeneralProblem/Atomic/BesselSynthesis.lean",
+      "source_sha256": "f74892c30219a85bd272b4898ef43cf94119b438837e5ece92d3850cc66afceb"
+    },
+    {
+      "path": "MeyerGeneralProblem/Atomic/GramSchur.lean",
+      "source_path": "lean/MeyerGeneralProblem/Atomic/GramSchur.lean",
+      "source_sha256": "a46deb220540550580567d34f64e64446c406ee0a8ec2805f7e5df21b6e80e7c"
+    },
+    {
+      "path": "MeyerGeneralProblem/Atomic/HermiteDistribution.lean",
+      "source_path": "lean/MeyerGeneralProblem/Atomic/HermiteDistribution.lean",
+      "source_sha256": "3ea5eae831de4693f4b5da99b9167257b9b71481b3ce1dae2f961b72d89d95a4"
+    },
+    {
+      "path": "MeyerGeneralProblem/Atomic/HermitePointMass.lean",
+      "source_path": "lean/MeyerGeneralProblem/Atomic/HermitePointMass.lean",
+      "source_sha256": "96d900f2d5b56a3d52d720b274253dbd9d1e095a8c3054fcce60773986820133"
+    },
+    {
+      "path": "MeyerGeneralProblem/Atomic/PointMass.lean",
+      "source_path": "lean/MeyerGeneralProblem/Atomic/PointMass.lean",
+      "source_sha256": "703d652299b84ff4ab2bb2f8d863e34a9ddb88d7f3c780d8415c782fe63bd1f5"
+    },
+    {
+      "path": "MeyerGeneralProblem/Atomic/RieszSynthesis.lean",
+      "source_path": "lean/MeyerGeneralProblem/Atomic/RieszSynthesis.lean",
+      "source_sha256": "df2d02e3c775ba3b2d64cebf568c3d824749fa924e754435d1b41d32a0a54c48"
+    },
+    {
+      "path": "MeyerGeneralProblem/Atomic/SupportSubspace.lean",
+      "source_path": "lean/MeyerGeneralProblem/Atomic/SupportSubspace.lean",
+      "source_sha256": "e0c074c9ef5835550631db60af54bd339511cbce6a2321401fb8a87bb5da25d5"
+    },
+    {
+      "path": "MeyerGeneralProblem/Basic.lean",
+      "source_path": "lean/MeyerGeneralProblem/Basic.lean",
+      "source_sha256": "4a67c56fe119c9c88c8e3b25b8fa2d90d63ae1e68271b5a180f5aec7648eb25f"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/ActualAtomRecovery.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/ActualAtomRecovery.lean",
+      "source_sha256": "ce5c52a846bd600d49455514c86a58e5a9451aaa1427f77ab03d64c389f8ead9"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/ActualBlockReduction.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/ActualBlockReduction.lean",
+      "source_sha256": "9294dc4bbe35c8b0b60a225771a0ac65ea3c0bcc194852717cc9c5b084ec64f9"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/ActualCatalogueBounds.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/ActualCatalogueBounds.lean",
+      "source_sha256": "ce4d7e539ed01a6fb4532285b4fc2afa35d0f5680767b00e2aefb60843420c0a"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/ActualConstantNewtonArray.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/ActualConstantNewtonArray.lean",
+      "source_sha256": "bef831799d1d493d1d1923664161cabdd513970fb1cea373a8b3f7b5f3b6a99a"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/ActualConvolutionVanishing.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/ActualConvolutionVanishing.lean",
+      "source_sha256": "4a043c1609cf3b10f42cf294555dc620678f43658ade80929ef0793be6a321cb"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/ActualCoordinateAction.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/ActualCoordinateAction.lean",
+      "source_sha256": "b173d13251067509f14aecb698746c3a8f8382eb4066630b787e9be5eee028f3"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/ActualFutureTailBounds.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/ActualFutureTailBounds.lean",
+      "source_sha256": "8bd0747e76d6ddcaa2efa2486667a20b7cda592aeb680058e66fc98d1ada9a57"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/ActualGaugeAction.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/ActualGaugeAction.lean",
+      "source_sha256": "fb9e38cc264077d74cccc6cdd34d8454a40eb4332461c9957e83b3a59fe54e70"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/ActualGoodScales.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/ActualGoodScales.lean",
+      "source_sha256": "383d0711caaed3d44f4826d5f094f08e8c3db099d590a2dad0fd6ea353fb1a23"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/ActualHoleExchange.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/ActualHoleExchange.lean",
+      "source_sha256": "88104fa49b05db0ceabb430dfbce6fc7fc3a96a32e94a83652eb7f35470ae42b"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/ActualPhaseErrorBounds.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/ActualPhaseErrorBounds.lean",
+      "source_sha256": "c7345bf60a10aac2d166273462218fda5838a6268df9b6f0341ad3e4d334b654"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/ActualPhaseWitnesses.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/ActualPhaseWitnesses.lean",
+      "source_sha256": "80f1a5b5fb7594c3bdf786b9b22a8e605c5851e3569ec43c0d3d1c3acb161245"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/ActualPolynomialSupport.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/ActualPolynomialSupport.lean",
+      "source_sha256": "7e072cd33593075c404e53ac3493988a622e84f95aa8ce86d16f84788d228059"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/ActualRecursion.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/ActualRecursion.lean",
+      "source_sha256": "bedf40a7db4ae5b511c7eaa16ab8381a76784c219343faf0bfdf07e5060a34b5"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/ActualSmallTailUniqueness.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/ActualSmallTailUniqueness.lean",
+      "source_sha256": "1e23f5750438ff30b80e3da26b91b5c7b1f4ac6e789821682233155119b11afe"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/ActualSourceGauge.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/ActualSourceGauge.lean",
+      "source_sha256": "3572feb3e954c48ce265576dbdc159d78dc44749ae3783b414e85c1f75500ac7"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/ActualSourceSplitting.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/ActualSourceSplitting.lean",
+      "source_sha256": "68bce348a2b687b02fe6fd4e90a37d26e97c63890270afe461783890b3bb2386"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/ActualStageSelection.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/ActualStageSelection.lean",
+      "source_sha256": "8194b77934026b082504103688463431de73e98d8bee704cb17e9e2d1d0ec47f"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/AnnihilatorFourierSeries.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/AnnihilatorFourierSeries.lean",
+      "source_sha256": "b8a66cb416a27e47a3dd7a2e30fcd552689c06b627df321b03f3e6bce714ed8c"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/AntiperiodicConjugation.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/AntiperiodicConjugation.lean",
+      "source_sha256": "4f8f328a88f57416e4aba6d4c18ddfa9300c3e4d349fbf522cc4736a3f3e5e00"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/AntiperiodicLift.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/AntiperiodicLift.lean",
+      "source_sha256": "18c076bd73cf554e36c993d66d71c1c7028dcbc815659245641209b7809f4752"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/AtomicProbeRecovery.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/AtomicProbeRecovery.lean",
+      "source_sha256": "fd26f5cc66fc9eca59091843b02f434cd7c735bc115976ef5b1ea260eb811112"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/BlockTailEquivalence.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/BlockTailEquivalence.lean",
+      "source_sha256": "3d05b936fff7d54d2ceddec16fe5315fa78627e6a5a2064ee2c0f5357c323d5b"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/BoundedOperatorSeries.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/BoundedOperatorSeries.lean",
+      "source_sha256": "6c32a941cec76f3ac665f310dfe76272b7b8618c30b7967dde34818651331400"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/CatalogueEvents.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/CatalogueEvents.lean",
+      "source_sha256": "e150a270d0187006ea220463028ae71560c3f6117766891f84bd5e078de0f190"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/CatalogueExtraction.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/CatalogueExtraction.lean",
+      "source_sha256": "6b9b195ead62129ab125da0f6dc910309da04f7cdff1e46acea7822057bd3c36"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/CatalogueNonresonance.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/CatalogueNonresonance.lean",
+      "source_sha256": "0f1916709f3abed51b6810ea297ec07110ffec7c7acb893a20ebba5511213607"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/CatalogueProduct.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/CatalogueProduct.lean",
+      "source_sha256": "57ec0e9e866d4502db3f42ddcf5bd51fbe74298ebfdcb130487dbf4b28dc83e0"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/CatalogueProfile.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/CatalogueProfile.lean",
+      "source_sha256": "088cd2472584660842afc9e91eaa0336eac606a14418b46141bf1f4c8953a9e2"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/CatalogueTailBudget.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/CatalogueTailBudget.lean",
+      "source_sha256": "1f68e4e9891e98c69cf1a0b2ba78c3324762774ac9f9b3d8616ef1adc520d117"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/CharacteristicGridReconstruction.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/CharacteristicGridReconstruction.lean",
+      "source_sha256": "fe642765934a391add269d23b64bb49f9316cff5bef73cc10e05f7deab7cc3ee"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/CharacteristicNewtonBounds.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/CharacteristicNewtonBounds.lean",
+      "source_sha256": "dda25c88199bd2391adce23b735987e5fc07923c6873a0e0b3875a5b3433a03e"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/CharacteristicTensorNewton.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/CharacteristicTensorNewton.lean",
+      "source_sha256": "4b8ecce760e777192831fe271d96bfde98ffee9e0b2aab22e3ebe9af8fb3b089"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/CompactFourierTaylor.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/CompactFourierTaylor.lean",
+      "source_sha256": "d12920ef0aa67625d068c1fd04f6b3a8f3059eeac73d72dff7b9a9ddb7c58170"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/CompactSineSeries.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/CompactSineSeries.lean",
+      "source_sha256": "09ff0a90965e4cb0f95c760010f6aee9fdb90d27b9176c1461884dd9d2612d30"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/ConcreteHoleCarriers.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/ConcreteHoleCarriers.lean",
+      "source_sha256": "372491adfa4ee6fa0c2eac4069543f5d6ae41cbaa534e293804af9a20cd14c66"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/ConstructedAlgebraicBasis.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/ConstructedAlgebraicBasis.lean",
+      "source_sha256": "30869b1d03c81ed295be13478fa55ab26c1bedcd453657e23ee65d4763cc0b6b"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/ConstructedFiniteExhaustion.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/ConstructedFiniteExhaustion.lean",
+      "source_sha256": "4330d6322c322ff3b22aba77c899bd5bca34adc4545ca5bbd0de7f75b4dd4bf2"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/ConstructedGenerators.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/ConstructedGenerators.lean",
+      "source_sha256": "25a244bc6fb0e704fc1a1f5b4cf7a9154d00aff89f303bfd9ae382f5e7de0cae"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/ConstructedNativeUpperBound.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/ConstructedNativeUpperBound.lean",
+      "source_sha256": "78536d7a347ac9033e64fba9e80d7a4b53c948185dbe2bc12ed9881e156c49f9"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/ConstructedSourceRecovery.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/ConstructedSourceRecovery.lean",
+      "source_sha256": "e47276b3b7c715034f165ca3f11c6c5ec908943aea66ffaf193ddd4236f5a594"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/CriticalBlockComparison.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/CriticalBlockComparison.lean",
+      "source_sha256": "80ff2c0c1de39996c558b61317995f4a1c674fcf34c013afa7957c1313a9cd81"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/CriticalCarrierRepair.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/CriticalCarrierRepair.lean",
+      "source_sha256": "ce7b2060103728daa087270decce86aeeb0474f1d13a2601887862a37a4ed6e3"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/CriticalForwardKernel.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/CriticalForwardKernel.lean",
+      "source_sha256": "2059a8891d3c80987217a518e961c2ea7998dcfc6128060a9cae551726d262e2"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/CriticalForwardMap.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/CriticalForwardMap.lean",
+      "source_sha256": "6adbd7159c4185b68504c2a3b41daf4273d35a69c4e1d218d641bd6b56f03cb5"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/CriticalGreenCutoff.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/CriticalGreenCutoff.lean",
+      "source_sha256": "62e9224334e81d7e1a860ae8afc76becab0db83047397ffb1a012f071d83c277"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/CriticalGreenFourier.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/CriticalGreenFourier.lean",
+      "source_sha256": "47bd94c71aa1c3fab334d445c7465fbc2efdd1cd15ddb40c338fec7b03de5733"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/CriticalGreenInverse.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/CriticalGreenInverse.lean",
+      "source_sha256": "a3848e73445da87852165e4ea1e4e49c5c740627826fe8ab5830a698f2889f36"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/CriticalGreenNativeBounds.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/CriticalGreenNativeBounds.lean",
+      "source_sha256": "09737744dffd09bc524961497e160e2be30cf523446fe817a8a8ce7e6a11a782"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/CriticalGreenNormalization.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/CriticalGreenNormalization.lean",
+      "source_sha256": "773ee3e9e7289144ff65a4dd1e9e31bac5775dd481b4b67c5b02241d4a27526d"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/CriticalGreenSupport.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/CriticalGreenSupport.lean",
+      "source_sha256": "1829e54e98f502e4865ff877d0ce3d31b5da5f98961c3dcb72698502189446e4"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/CriticalHeadInverse.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/CriticalHeadInverse.lean",
+      "source_sha256": "2e0f63f233d42c9263639b60e2e7cf9816a4d8c6496795271d5565261dd8500d"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/CriticalMultiplierRecovery.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/CriticalMultiplierRecovery.lean",
+      "source_sha256": "d8d39733e62abeb89e547135f36a22d9891b7bbb39a4ad4053780b757c63cd87"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/CriticalNativeRepair.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/CriticalNativeRepair.lean",
+      "source_sha256": "3792cd07471010f0b826d6ce4d09fc1ffcfc6764fdf2854041c49b43ab22c5ea"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/CriticalPoissonRepair.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/CriticalPoissonRepair.lean",
+      "source_sha256": "99a671fac7a775c7e0daa1c1a63f7724eca187d652f9d959169441f78a515d60"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/DecreasingNewtonBounds.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/DecreasingNewtonBounds.lean",
+      "source_sha256": "0ce19541688d2bd7206c088762529d7853e2f123c190ab333ac92e5b73e92344"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/Definitions.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/Definitions.lean",
+      "source_sha256": "d232616a04f0c3ed1a64ed79920b2ceedce754be4d242ccd15db6116ea580848"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/DistributionDifferences.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/DistributionDifferences.lean",
+      "source_sha256": "aeeeb9ee89148d2c8e70858621091607515ca62f191556bb8fc7c0fd5656d203"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/DistributionLocality.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/DistributionLocality.lean",
+      "source_sha256": "fef0afdf9a2b9055874aea3a298d21047c737bab0bd0879fbfe57d5a0a7aa27d"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/EndpointCarrierLimit.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/EndpointCarrierLimit.lean",
+      "source_sha256": "f4f1e63bf3c0ed2815786b944a1373b43aa9c690e9adf8ef81e2fe9b8aaae71f"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/EndpointCharacters.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/EndpointCharacters.lean",
+      "source_sha256": "7253f8c7e9ea5bb4696542088e1c441379c45a02ca6d5ff11c1660d96febe89d"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/EndpointCompleteLine.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/EndpointCompleteLine.lean",
+      "source_sha256": "48ac7ce0f50312e82c1c8529b073c27b4a30cf98430719b7400a0724a4b23e11"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/EndpointDeletedSource.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/EndpointDeletedSource.lean",
+      "source_sha256": "fda7d11aafac3f9aaca9eeb05befbc982d51a82e5c3ccc924f0d0151f390a426"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/EndpointFiniteArray.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/EndpointFiniteArray.lean",
+      "source_sha256": "89d505d663b1567a6ea256b946b282ebed45facc32f4ebb2efdf8d3fcb1d9790"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/EndpointFiniteClusters.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/EndpointFiniteClusters.lean",
+      "source_sha256": "019fdad49a4a3770dd9d217cf5b096e6dd3f459f03ba0987339aff35d7c43e29"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/EndpointFiniteDiagonal.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/EndpointFiniteDiagonal.lean",
+      "source_sha256": "41e13b4a8d10e112276c1a131046bd991c61911bffd9f77171363a7794318dbb"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/EndpointFiniteFlags.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/EndpointFiniteFlags.lean",
+      "source_sha256": "0437ca88539d6f070710cfed3e76e715467d47be095918466a4848d84cdbb554"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/EndpointFiniteGauge.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/EndpointFiniteGauge.lean",
+      "source_sha256": "e516b2e2b2588d79ef6e9249ffa9026e52c83100c375954dcf4eda2f880a75e1"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/EndpointFiniteKernel.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/EndpointFiniteKernel.lean",
+      "source_sha256": "c280af639376cec7bc52f4f9e191eb8723dd76d474f6da07dad8df60ea85db0c"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/EndpointFiniteSource.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/EndpointFiniteSource.lean",
+      "source_sha256": "80048381038e8373b09c85e8032350e46a4345ecf3c0ca7c8d0af891a930ac71"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/EndpointFourierEigen.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/EndpointFourierEigen.lean",
+      "source_sha256": "73381e231fff9e519d8b77f48f9ed9dfcddfa4d6e32f2a337fcf08328c5805d5"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/EndpointHalfNewtonCoordinates.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/EndpointHalfNewtonCoordinates.lean",
+      "source_sha256": "517c53e558ee20036903fb4e0584780f176da4d5d766f4f91b65c165a051999d"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/EndpointLiteralMoments.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/EndpointLiteralMoments.lean",
+      "source_sha256": "4c3c47e9920b72f37002bf2d838d7ad8160c284c7a56e58e9d1b196582f76442"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/EndpointLocalizedMoments.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/EndpointLocalizedMoments.lean",
+      "source_sha256": "563e45417fdcb946068e5ace92de9b9adc3640d771b15204ffd995569ee824b1"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/EndpointMatrixConstruction.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/EndpointMatrixConstruction.lean",
+      "source_sha256": "25d6c9c410ce00412de958d7caafce3cb40aefdc735a83ca766709413d2e0718"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/EndpointMatrixKernel.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/EndpointMatrixKernel.lean",
+      "source_sha256": "16721695394ab2a9fa7f3d11283abcd6834358b2592dca4ad1391c26830a17f4"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/EndpointNativeLimit.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/EndpointNativeLimit.lean",
+      "source_sha256": "73e144c3af0864b37f690d59a9bf4fcdbc95eba3daa0a5a192bd2e185eec9065"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/EndpointOperatorInputs.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/EndpointOperatorInputs.lean",
+      "source_sha256": "3a0a260c8d82c4b7db0012364e12c676e9959558c32b2c3a0e11f960626a428b"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/EndpointPoissonSource.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/EndpointPoissonSource.lean",
+      "source_sha256": "442eccdf442a2f8c38a777c95551fa45f6d30461010aa4d3ab7bc7566f5f1d0b"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/EndpointRapidMoments.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/EndpointRapidMoments.lean",
+      "source_sha256": "22cf8ee9c4af14a4b25948ce826e7946e1871cd3c0ce24779391c35fbfe41c66"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/EndpointRecenteredPairing.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/EndpointRecenteredPairing.lean",
+      "source_sha256": "25bf62323f58c86dcb437d687a126cff1d7a954b4e68864de61492d769876b51"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/EndpointRecurrence.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/EndpointRecurrence.lean",
+      "source_sha256": "03b96d4b136f9d1f64783de2fc7e6fca3ca8df87aed70debab996f3a6554ec3f"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/EndpointReflection.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/EndpointReflection.lean",
+      "source_sha256": "a2bab594ee1d03745065aefd1cafdc4bba88e1d38cb88306f2fdc164bbb5c922"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/EndpointReverseZak.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/EndpointReverseZak.lean",
+      "source_sha256": "4ee19da0853136f94b87454f3147274387634819b39bafe626f61262336673fb"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/EndpointSourceExhaustion.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/EndpointSourceExhaustion.lean",
+      "source_sha256": "8e559621ae596846cc9344b4014cb0a24a545fcdd42a4f3dc4a0edb7494544f8"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/EndpointUniformAdmission.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/EndpointUniformAdmission.lean",
+      "source_sha256": "20b7aeb8fcbbf19509ee07d3065989c05521a08c2906d9e126e10574daf2234c"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/FiniteClosureSeparation.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/FiniteClosureSeparation.lean",
+      "source_sha256": "8ee24572034f8f77f55e3d1a240bedad681a53653e8a54f08690e932b1bd9ea9"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/FiniteEndpointKernels.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/FiniteEndpointKernels.lean",
+      "source_sha256": "7fbc9a5e8cbd3d079977c81f1e9ac5266afcd362b2e29dc2b64a731742a86ee5"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/FiniteFourierProducts.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/FiniteFourierProducts.lean",
+      "source_sha256": "1986668129664539bb3c2aa11f5b5ddeab408d907e4db233a94cd27dcd9b8865"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/FiniteHeadExhaustion.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/FiniteHeadExhaustion.lean",
+      "source_sha256": "3ccf2449d9735d5fd9e75f0cd5be7fe3e4b3539f74b47734d93501d78a208430"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/FiniteHoleExchange.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/FiniteHoleExchange.lean",
+      "source_sha256": "31f590b62a2e8cc3fe43149c6f767c0d98df14f349253dbd55fde4e5918dfb10"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/FinitePhaseDescent.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/FinitePhaseDescent.lean",
+      "source_sha256": "db02c2bf3d18671b208d2d4978146e5d563529b23f06f4aa6e31ff7e3fb7b984"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/FiniteSmoothPartition.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/FiniteSmoothPartition.lean",
+      "source_sha256": "9d4521a61769d7e83dd181214a7f3104ab88240ee037e25013d3a1a3d37ca42d"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/FixedNewtonBounds.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/FixedNewtonBounds.lean",
+      "source_sha256": "303213f7ef04e66b5ad7dbd786a0d8960b1e4d7e8b022a80dd1bbb307025d4a6"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/FixedNewtonMembership.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/FixedNewtonMembership.lean",
+      "source_sha256": "8225e429b449c63ad4d1907679c7e87b350d352819f7b60ace9eac31b96dff17"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/FixedProbeTemplate.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/FixedProbeTemplate.lean",
+      "source_sha256": "deaa5f38bffc9a667658d72a1ee784a007de0f60f1eea9e5b3a047fa698e7b5e"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/FixedZakGauge.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/FixedZakGauge.lean",
+      "source_sha256": "0ec1099d3115eb9119eb6fc65d6c693edc18cb36757a405d2b9ae0f7ac821321"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/FourierTailBounds.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/FourierTailBounds.lean",
+      "source_sha256": "13865baa4c65b854de7f41ac80b5a72d676203ca661b6ca2da1aeac137cf44be"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/FullExponentialBounds.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/FullExponentialBounds.lean",
+      "source_sha256": "06c41cfa047a6e78c5013bfbd7cafd4d8fd6c6b3efb8dc66a8a5a23428df1580"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/FullExponentialResidual.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/FullExponentialResidual.lean",
+      "source_sha256": "8fc7e597a2404e76624f05540cbb2b5707ce1c53cbcd1bddfe6ea757bdccabac"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/FullGraphBounds.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/FullGraphBounds.lean",
+      "source_sha256": "0898afb4ee78ac38e5a8a59c35a00d29419628194ee324aad7b1e370d85692e5"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/FullSchurComplement.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/FullSchurComplement.lean",
+      "source_sha256": "3f566480156463f58144e4179962b32f35cb9a7d5a519afc634c4497c8cb944e"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/GaugedReverseZak.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/GaugedReverseZak.lean",
+      "source_sha256": "d9f27973fef8276036f7a274e2e9bb739ec553d29e45c415bfe6e5da72fb651b"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/GlobalPhaseDescent.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/GlobalPhaseDescent.lean",
+      "source_sha256": "e1f591a05f816bad4768b4264e70d73bfc218f8121b682fd943fa482b373f705"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/HalfCoordinateReverseZak.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/HalfCoordinateReverseZak.lean",
+      "source_sha256": "9586276407c2fda274ae6873d50edf877ef92ad115acff8c1b4532cdc9f8bcbe"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/HalfNewtonCoordinates.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/HalfNewtonCoordinates.lean",
+      "source_sha256": "7ac069fc7c93d4afd2cce4d66d81d9b0d6eeb6ebd7a9d99e8d2ef1e1668d6e50"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/HalfNewtonDiagonal.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/HalfNewtonDiagonal.lean",
+      "source_sha256": "ced7d626435ca110e759b3b540eb5d45bcb258d67e7b17c7ea0b7b6db77d568d"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/HalfNewtonFlags.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/HalfNewtonFlags.lean",
+      "source_sha256": "cedb90254134ec5aa32da3c4ec6d015fb19c5e483308f15fade17f0b9cf77a54"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/HalfNewtonFourier.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/HalfNewtonFourier.lean",
+      "source_sha256": "817f6f783bea00cd0b355cb655632fa722d8ce7dd5965bda4ee1762ae715a5be"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/HalfNewtonGauge.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/HalfNewtonGauge.lean",
+      "source_sha256": "6c0036da4dfead123e4ffb8cec2712de7b0ffbc0fbde64355554203c70805292"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/HalfNewtonGaugeIdentity.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/HalfNewtonGaugeIdentity.lean",
+      "source_sha256": "e78484c2391dae5a71c4775a642d79ad5de88a4958d004d68a6398d75aa36951"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/HalfNewtonGaugeLocalization.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/HalfNewtonGaugeLocalization.lean",
+      "source_sha256": "1fa6b56a20ef766967fd5c5cc678ce0b1c92cace4f299a804da6101272bace91"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/HalfNewtonGaugeMembership.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/HalfNewtonGaugeMembership.lean",
+      "source_sha256": "2882830296519b5a9266810ba9581a1bebb90d0f0f64b0f793f50b8f8d83a98f"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/HalfNewtonLocalization.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/HalfNewtonLocalization.lean",
+      "source_sha256": "192f930b4cbabb7c2616eb5d3e1c42d86b5a1e3120a84ba3ad462010a36ac3b2"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/HalfNewtonMultiplierRecurrences.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/HalfNewtonMultiplierRecurrences.lean",
+      "source_sha256": "209dd110d1fba098c28e41876fc2ec6ac22754ec602426fe2bd09153f37a3752"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/HalfNewtonSpan.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/HalfNewtonSpan.lean",
+      "source_sha256": "577b43ec3a8eb6b80a9fb747eddf4181abdf92032d1aa47d27e403f0334d9a2f"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/HalfShiftedComb.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/HalfShiftedComb.lean",
+      "source_sha256": "dd7bbe2b3187b390707900940bd719035991bac59c359a6130fcf49cfc90ff1c"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/HalfShiftedFourierMinor.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/HalfShiftedFourierMinor.lean",
+      "source_sha256": "6c017ea82c6455b00ba8f390fad5023e4b2028bf929d2280ba69d9a0f09fc7ff"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/HalfWeylSource.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/HalfWeylSource.lean",
+      "source_sha256": "d7a8a32633071a9fb47ae07c612e1d198f7b3b87afb4d28c93026c983c766c94"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/HeadNativeBounds.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/HeadNativeBounds.lean",
+      "source_sha256": "336a26848923a9b432a5318e766b8f96313f4c74f7c1cb6e7314baa745cde8cd"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/HighOrderGapLines.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/HighOrderGapLines.lean",
+      "source_sha256": "6096a16e228d57bec4781ccffc41204d2023a6dde7180d56c3671aa040ab0577"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/IntrinsicNativeRank.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/IntrinsicNativeRank.lean",
+      "source_sha256": "291f2db176625637847be6183f1d39c385551d83a35b5951cbc013289888fbbc"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/InverseLatticeDifference.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/InverseLatticeDifference.lean",
+      "source_sha256": "1569c50a4e0160afcb6373670b1c3c2248a05219ac09c3cc9d68060c40cd94e1"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/IsolatedMassRecovery.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/IsolatedMassRecovery.lean",
+      "source_sha256": "7488a805299db99f0e0ef2822e9214da57f1b45395932d8b9307ed849608dc20"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/IsolatedPhaseCoefficients.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/IsolatedPhaseCoefficients.lean",
+      "source_sha256": "c7c1c9070457e0a885cd3ddb992111b0a486d887721331b4da4da7bcfc81c5e8"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/JetTailBudget.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/JetTailBudget.lean",
+      "source_sha256": "6faf7a760929df65c7bd2d554ce8a164350df20a8bd498c6347efffe2f9b131a"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/LatticeJetDifferences.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/LatticeJetDifferences.lean",
+      "source_sha256": "0e6a42e1d3e47e52517bf3b7f4b3f55e978fab90c74cb6c6eb6f0df8be8c31b2"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/LeadingTranslationErrors.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/LeadingTranslationErrors.lean",
+      "source_sha256": "1715465f1124c2d02e8f7f2f0515795970265968723c593a2d8eb37f39363289"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/LocalJetRecovery.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/LocalJetRecovery.lean",
+      "source_sha256": "8b2fe8ee639bfce5dfe540a91feb6ad829b0e6899a5a3f8eac2d713177184c4a"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/LocalMultiplierCancellation.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/LocalMultiplierCancellation.lean",
+      "source_sha256": "984503b117652d5a4faafa9a9fc75af41648ade5043565b4f730056c80564d42"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/LowOrderNewtonBounds.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/LowOrderNewtonBounds.lean",
+      "source_sha256": "bee7a4b038a2dccbfebaf88aaa92f081a3fd434ad0e3a1faa0d3eac569a5f639"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/MomentHilbertEmbedding.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/MomentHilbertEmbedding.lean",
+      "source_sha256": "524d4a50aaf553283be1bd6238dc3897ff98e9d0c4e931a871a1978b02a14a5d"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/MomentHilbertOperators.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/MomentHilbertOperators.lean",
+      "source_sha256": "d5c0310773ee31ccef15022c6be85be1940eb65892d7a64a357481737b3a7460"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/MomentHilbertOrthogonality.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/MomentHilbertOrthogonality.lean",
+      "source_sha256": "f07cc65bab71f48014bb0a06c0a341dcc469e30e5141a55b220f23d5f8b93bcc"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/NativeCutoffBounds.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/NativeCutoffBounds.lean",
+      "source_sha256": "95001750a5044f4b572de6f0ed3201236b87af61ed7b7b5b086f18125a7adc66"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/NativeDifferences.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/NativeDifferences.lean",
+      "source_sha256": "f66c05f08d5a73c4e40d4562d0ba502eb6addac33d8307b7582b90f3574099bb"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/NativeDiscreteJets.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/NativeDiscreteJets.lean",
+      "source_sha256": "10c158ed4800fe2474b6ac27193d0668d1f678e5cb8a5819d7bd91f11fed039e"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/NativeDualMultipliers.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/NativeDualMultipliers.lean",
+      "source_sha256": "1a09ace752eb1533cc27632dc681a11dce2155ab075eff8d6513ae2951fbb8af"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/NativeDualOperators.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/NativeDualOperators.lean",
+      "source_sha256": "da22596f017786bad98f9f096c42e14c74a856092fda1b1255c3dbe46682dc41"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/NativeFourierMultiplication.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/NativeFourierMultiplication.lean",
+      "source_sha256": "f7791325ce5362938830d619f4dcb73dfa3636b8bd38fd8df99bd2b2b9a55d4e"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/NativeJetProbeRecovery.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/NativeJetProbeRecovery.lean",
+      "source_sha256": "0b08053ad4770b06647248caced427d6dc135185796ece065e85cd3f4986fc44"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/NativeMultipliers.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/NativeMultipliers.lean",
+      "source_sha256": "32e0e3077121335ab56372855f46ff7c63029b4d30cdb8d56ec4f9de5c77bf6f"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/NativeOperators.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/NativeOperators.lean",
+      "source_sha256": "af0a363f3b1fbc0cc2ee3508c251fd4a1b1e1acb35a844dd7448e7217262b1c0"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/NativePairingNorm.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/NativePairingNorm.lean",
+      "source_sha256": "53fe602fad97a884991ce254becf08087fb1291dfc115d2e8e4b8f87cfba4a3a"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/NativePeriodization.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/NativePeriodization.lean",
+      "source_sha256": "4da346d5a7a54f2d7be484889bfe1f936d95250a42e56f09e570154f1e0be76f"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/NativePointJets.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/NativePointJets.lean",
+      "source_sha256": "44ce14e076d9e24276e02e5fde0c60dff89cac432ab4e22dd7fd9507e2ee4f3f"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/NativeSchwartzSeries.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/NativeSchwartzSeries.lean",
+      "source_sha256": "25d594088f1a5c7419e89b5a346e98d5565781b28c2ab027b0bc41716389ed60"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/NativeTestTranspose.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/NativeTestTranspose.lean",
+      "source_sha256": "29310e9398818216f5781e570d47a308f3e961c36431391f0c7d3af047f364fc"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/NativeTranslations.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/NativeTranslations.lean",
+      "source_sha256": "39b61f076ba10951bb2ec546b36f2d7ee1f5f471062ef8c31e8ebb3291376b6f"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/NativeWeakCompactness.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/NativeWeakCompactness.lean",
+      "source_sha256": "ad152543f71876c0f03de272c9647e8afafa8b6040415e360053ef70828c6f26"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/OperatorCornerInvariance.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/OperatorCornerInvariance.lean",
+      "source_sha256": "8f288aa77e22d20ad1e6ffdcae18172364347ab02176f5fb82138f31dd69faf7"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/OperatorSeriesIntertwining.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/OperatorSeriesIntertwining.lean",
+      "source_sha256": "3053888f06567259795cef49cc85d01f27a106dfe51a696d09619095a687292c"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/OriginalMixedNorms.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/OriginalMixedNorms.lean",
+      "source_sha256": "e8495bde66947ba71fed0836a4571f8a70e0fcc701108e6f042dae8a60bc1b43"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/PeriodicAnnihilators.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/PeriodicAnnihilators.lean",
+      "source_sha256": "61e1f6eb08fed53f70f74083c5b4cf7ae2534fc64d375ff3d5e61e2622a9b29f"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/PeriodicDescent.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/PeriodicDescent.lean",
+      "source_sha256": "d5954020021066673675b912e8135e46903b8166acb239e2c896c0de318360ec"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/PeriodicLift.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/PeriodicLift.lean",
+      "source_sha256": "cf5b068a45f0a5e4b002fd4b4f87d9f24b74dc47dccec15696c100e8c0cdc635"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/PerturbedBackwardShift.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/PerturbedBackwardShift.lean",
+      "source_sha256": "83052c1463a1acae2352b43f94512b553740e3ccc607ec19262341a7b6275740"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/PhaseAvoidance.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/PhaseAvoidance.lean",
+      "source_sha256": "b0d37b726c37a324760f9a18f2fbe1b1807aa1802f254811bc6aefdb31971046"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/PhaseClosure.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/PhaseClosure.lean",
+      "source_sha256": "ae02598abe5ff09994c6098a3a8c45f0fcbd2ddbb2b9df956bf2d9066c704c91"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/PhaseCounts.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/PhaseCounts.lean",
+      "source_sha256": "461fb39ed368aa05fe6e0c6b0aa688e1d50b284e53d2db064851d3a9f084369e"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/PhaseGeometry.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/PhaseGeometry.lean",
+      "source_sha256": "08c447e869f504928bd7b481870d7588f568c01d96bd9f17a5ef79ac3eb9f360"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/PhaseTranslationErrors.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/PhaseTranslationErrors.lean",
+      "source_sha256": "3b22afbdb77ce66d784a5500817741998ede4f3e977446494b1fc0408554f749"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/PhysicalIsolation.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/PhysicalIsolation.lean",
+      "source_sha256": "5f4f0bf3a3e725ef67c216eda67c38a40e6dfa13443fdfa98db7341e05bb82f2"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/PoissonHeads.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/PoissonHeads.lean",
+      "source_sha256": "869d3a47b9b283a5ee45138875222cf889031a4715d9021b281a5f855dacb7c0"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/PolynomialSublevel.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/PolynomialSublevel.lean",
+      "source_sha256": "140964a2463149a25d824cb8262c3d450e0b4b2d5af492144952822c94641d6d"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/PolynomialSupportDescent.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/PolynomialSupportDescent.lean",
+      "source_sha256": "87bc1c8668247e09ef4f9ebc2cdc817e540dd3928c07842930f1ace401b9b0b3"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/PrefixGeometryParameters.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/PrefixGeometryParameters.lean",
+      "source_sha256": "57ee53cec1d8e557004ecf1c0637e7a3213346afaba4eed800347eb6f2a9c843"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/PrefixInterfaces.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/PrefixInterfaces.lean",
+      "source_sha256": "4a03af7207377b0059cc2f390cc1e7f800955462498a2f32ceed8c4a228e5b2d"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/PrefixPhaseErrorBounds.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/PrefixPhaseErrorBounds.lean",
+      "source_sha256": "df34c52222498db758fdfab94e52d20b03cc235d91c336462cc4137f5f754f05"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/PrefixRecursion.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/PrefixRecursion.lean",
+      "source_sha256": "87a36dbf0f942fd4b96ed13600cb162ba915af63ea8d58b648e60c4e3582f9be"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/ProbabilityBudget.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/ProbabilityBudget.lean",
+      "source_sha256": "71e07be2d2b7f836e7172e036d887bbcd5427a213f0ffe915e7d6b5857f9df6d"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/ProfileConvolutionVanishing.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/ProfileConvolutionVanishing.lean",
+      "source_sha256": "f6391da87afdb6269444288a9570dd782535dd7739ec8b015b1cd1f94c793aa5"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/ProjectedComplementBounds.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/ProjectedComplementBounds.lean",
+      "source_sha256": "2c14429bacfe0dfdf8aab73529f25a0e6af28278223144dbc5d745a3731df8c8"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/QuadraticSublevel.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/QuadraticSublevel.lean",
+      "source_sha256": "ef37528b8b587b222a36ef079ef4dab34a7962d862a11187e34cc3c18be9f743"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/QuantitativeSectorSeparation.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/QuantitativeSectorSeparation.lean",
+      "source_sha256": "4fff852312cb5b0fe9389728a8dcf81dcc691fa9d7818af699a6f1b8c566d869"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/RankArithmetic.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/RankArithmetic.lean",
+      "source_sha256": "f2c88c179eb7410f67ce2774362c6ec8827dc908b08158e4c9650a1ab83f5aac"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/RapidAdmissionSeries.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/RapidAdmissionSeries.lean",
+      "source_sha256": "79f0b125f9b8aa67f6c9f43910d1a7a6d08ef6850295e43cb0b2235486c91866"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/RapidCompleteLine.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/RapidCompleteLine.lean",
+      "source_sha256": "f5b0ee49a82691925be7adf0141e38ac6440e5f72dc009afe5cbb4019d8bc83c"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/RapidInterpolationGrid.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/RapidInterpolationGrid.lean",
+      "source_sha256": "a790673497392b5bd4128036f33f12e4d927352076ef6f4217e5e2d3a68d53b1"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/RapidMomentAdmission.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/RapidMomentAdmission.lean",
+      "source_sha256": "a65011883024ff079028d77e7b227df592f5d2daa4ea8db33698782ef24d6bfe"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/RapidNativeAdmission.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/RapidNativeAdmission.lean",
+      "source_sha256": "523a84915becb4289b0092de2e69c75510fa398ef687bf65266831fc40701aea"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/RapidNativeExclusion.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/RapidNativeExclusion.lean",
+      "source_sha256": "e373dfb0a17cd8c18c59ceea2cf78e480c31e54eb6ca1b798a23e1c916b1a35b"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/ReciprocalAnnihilatorProduct.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/ReciprocalAnnihilatorProduct.lean",
+      "source_sha256": "7ec51e0b99e934177ae3025e250c1ed3f9f84c28cca16fc1ebf9f2c50c23fd68"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/ReciprocalLaurentPolynomial.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/ReciprocalLaurentPolynomial.lean",
+      "source_sha256": "63dd154ed3ab809296ab01e87b2276cdc2d39349eabda0d8a0d6de754d3e02f9"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/ReverseZakChart.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/ReverseZakChart.lean",
+      "source_sha256": "95ea25e1f65dcec2b3e78702b42d2f11117f3f1eeb7d1861e724057e5b8806bd"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/ReverseZakInterpolation.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/ReverseZakInterpolation.lean",
+      "source_sha256": "5f6b2f7dd80ebb48f355d085baee1c72cd1b3ec40283055ea1201b85fd54588e"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/ReverseZakSampling.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/ReverseZakSampling.lean",
+      "source_sha256": "d4e7ffe3b25e9f8d358dc234d314822afac51b0bfb88d67187d0fa79428ec8b5"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/ScalarArcsineSeries.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/ScalarArcsineSeries.lean",
+      "source_sha256": "2ea642d30809359af5680bc6cc117f9e9017b686860bfe4211b548dfa997f732"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/ScaleProbability.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/ScaleProbability.lean",
+      "source_sha256": "91a4a7b1888bc843edef7581e3a96f103c2e41dbbcfea3378449b9bccd907be5"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/SeamArmBounds.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/SeamArmBounds.lean",
+      "source_sha256": "3ce3c2e62d55552ad2f249e35e85f92471f8ebf5f09aa629474cbb1b886aa3b6"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/SeamArmInvariance.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/SeamArmInvariance.lean",
+      "source_sha256": "ec296a82409f8cf0f6aa556021bb9691e41e15a7173419621e2fc36762428983"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/SeamCompleteKernel.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/SeamCompleteKernel.lean",
+      "source_sha256": "fdec397af8667d1cbb778101f0eb2ff7d78b68e5d5c0933dabef4fee19d3e028"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/SeamCoordinateIntertwining.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/SeamCoordinateIntertwining.lean",
+      "source_sha256": "407ef83b158a5074a437eb9ce4a9031878e33fad21a4d15dcb6fbf8d6dcba97b"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/SeamCoordinateOperator.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/SeamCoordinateOperator.lean",
+      "source_sha256": "53c5134311ceac5b7802ff2b267efbd28e2d1b635e5b892e207162859b6d1857"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/SeamFirstReadingBounds.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/SeamFirstReadingBounds.lean",
+      "source_sha256": "629faf562a99ea0b0f32285e7775b6e7e8ce61f221269472102ac2b1ea734797"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/SeamFirstResidual.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/SeamFirstResidual.lean",
+      "source_sha256": "58e7e8a744d057fe254689d773bca64fb6693a63eece485d4964923da6f8b923"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/SeamFullLeadingBounds.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/SeamFullLeadingBounds.lean",
+      "source_sha256": "512fb53a39c6a5d1d8d122850b8702eb11f7be4496f1e342c29b7ab59cd7e047"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/SeamGraphCorrections.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/SeamGraphCorrections.lean",
+      "source_sha256": "ce782ca9107240c33c1b3489b9b858c8abf9ec7c444054082547e4ac178b7282"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/SeamKernelBounds.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/SeamKernelBounds.lean",
+      "source_sha256": "741d43ea14af9167f71f6d2709ac0305cac55765615c04efeb9015d8852c394a"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/SeamLeadingCompression.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/SeamLeadingCompression.lean",
+      "source_sha256": "faf85af82089ab1ab398b1c45438ffc658352dce714b33845e69844b47e61c78"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/SeamLowerCoordinate.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/SeamLowerCoordinate.lean",
+      "source_sha256": "e2c14d383723ec02b3bb931a2e5cf9520ceb890c5be447144d565c13b4ea6d44"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/SeamMomentDecay.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/SeamMomentDecay.lean",
+      "source_sha256": "8a503f90db2b10194346500029998582c9dafe865e9e6a18692e11b05953999a"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/SeamMomentProjections.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/SeamMomentProjections.lean",
+      "source_sha256": "df6216a2bc884bc1c2fc808873a934cc62a33e2e6e70e3de57aea6e81cf048e9"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/SeamNewtonOperators.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/SeamNewtonOperators.lean",
+      "source_sha256": "02cfd3bd1acb14058b82350c7149ead2ae1a841cfcaa2658cc2f88dd92999f9d"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/SeamRecovery.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/SeamRecovery.lean",
+      "source_sha256": "fb513b7baed663d632f6be93fa2133974e74b621be7fbdebc988b445ea7a130d"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/SeamSchurAssembly.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/SeamSchurAssembly.lean",
+      "source_sha256": "34fcbf859d5852ad51c958126678bc7015efe47501a11fea3160d09d7db56ecb"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/SeamShiftOperators.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/SeamShiftOperators.lean",
+      "source_sha256": "a942b47a09488f472b9771bfbcc7968298440382ad691d68a6cf5d238fc4d6a2"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/SeamSineOperator.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/SeamSineOperator.lean",
+      "source_sha256": "7a3d78ac34a1f2d71ed1ff3cb521e1c4fc3474463091a2309915fc8eac550986"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/SeamTailIntertwining.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/SeamTailIntertwining.lean",
+      "source_sha256": "5ae07be73b187dde4e4236fe6ea12404a85aed8fa82ef249ecc5af6ef394dede"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/SectorIndependentFamily.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/SectorIndependentFamily.lean",
+      "source_sha256": "5556a9879b902af56989de8b4955091c95ad2d21eb3bfcbd135c3efbdfdcdd6c"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/SectorSeparation.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/SectorSeparation.lean",
+      "source_sha256": "cb9f3724c8f6e175974ad4c68e3d46449e98defd341a7ef55d9b07cd1bd22514"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/ShrinkingBumpBounds.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/ShrinkingBumpBounds.lean",
+      "source_sha256": "a36ca95be85c9b50c43da36b4eaa587da8e9cb5c9ccfd4cf93649a70966764ee"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/ShrinkingNewtonCutoffs.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/ShrinkingNewtonCutoffs.lean",
+      "source_sha256": "c065c28369bdcfb73107a8a4f0bc4afbfa4d1f7d227b32520f9a78d4a8c2459b"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/ShrinkingNewtonDerivatives.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/ShrinkingNewtonDerivatives.lean",
+      "source_sha256": "0575ffe6ceeeaaf93e0dbc654208e50c1d615ca31f36b099707d63eda48ac568"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/ShrinkingNewtonMembership.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/ShrinkingNewtonMembership.lean",
+      "source_sha256": "77ead037492a41ade64507e4d600c9f9756c840848f10ad6809aad3db1ccf178"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/ShrinkingNewtonNorms.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/ShrinkingNewtonNorms.lean",
+      "source_sha256": "413e5de7ec362ca1e88cdc978d7cac5db205f360d8813609e45aaf39f0241d76"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/ShrinkingNewtonTests.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/ShrinkingNewtonTests.lean",
+      "source_sha256": "814bea27b92fb8b6a8fc1e5e7739e42ea106b2c0e049ed62cfb1f0fd7f618929"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/ShrinkingNewtonWeights.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/ShrinkingNewtonWeights.lean",
+      "source_sha256": "c4ed5aed1ce0a15e638ac8e8a1243e0ad00d74df96a7ef1572e2aa699f632228"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/SignedNewtonChart.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/SignedNewtonChart.lean",
+      "source_sha256": "70a527ed615afa5db8cb9085176e3039206675d3edef74eea86ce4840cc4afd8"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/SignedNewtonParity.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/SignedNewtonParity.lean",
+      "source_sha256": "92b2ef085ab21b81d154a8ad306b7a9b43516bd015cf7946ddc87b3a7c9e140b"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/SignedSquareNewtonBounds.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/SignedSquareNewtonBounds.lean",
+      "source_sha256": "412e232d67fb76469731519313995b81b341aa48b9d61e9b7ab14544dc7b64d8"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/SinglePhaseLift.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/SinglePhaseLift.lean",
+      "source_sha256": "079ce502ef8d0c23e65931c87113a14c02e146150aebcc4e7d9daa64a31b2e22"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/SinglePhaseLocalization.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/SinglePhaseLocalization.lean",
+      "source_sha256": "54654be078299f5bc88111d607333ee2959e1b65d8a3193ae235826fb79b0f2f"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/SinglePhaseSeam.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/SinglePhaseSeam.lean",
+      "source_sha256": "3247f912ee42b9721ff3914a179f70705ecb6abeda3bc4e36bba68d1b669a208"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/SingletonExhaustion.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/SingletonExhaustion.lean",
+      "source_sha256": "0d5c35ef1726e9efbae560ba0f6880f91ed5d9cfbd9e1eb8067d9bded51c6702"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/SmoothSelectors.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/SmoothSelectors.lean",
+      "source_sha256": "e13854fe9ec875fa6f18d9051e4c3e59c6a00db50a9b7e2ce74bf29a94fdb606"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/StageJetIsolation.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/StageJetIsolation.lean",
+      "source_sha256": "4a5e17fe576e6463cee3c8c507df9cdfbd79f50291c876ae1d3748f3cce0fe22"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/StageMultiplierBounds.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/StageMultiplierBounds.lean",
+      "source_sha256": "7da4d08d287b867984eb88d443f9aefb1aa571ecdd1933c09d41b543e3d82ab9"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/StagePhaseParameters.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/StagePhaseParameters.lean",
+      "source_sha256": "e89048f8a2c67430f853ead4ae77b9a03012eecef1462ac2e931df9cdec1c471"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/StageTailAssembly.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/StageTailAssembly.lean",
+      "source_sha256": "b03898470ed1ae42077f3d77edc6b2375a42c740d02b7d16749aea273004cd6b"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/TensorNewtonInterpolation.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/TensorNewtonInterpolation.lean",
+      "source_sha256": "821c047f6e2acc45099500842fa1e6c0b1845a1dbbd28361ab3eff77d4d527aa"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/TorusFlowDensity.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/TorusFlowDensity.lean",
+      "source_sha256": "08b0d80e6c47ba1927f1fb03955cc48d2707e3f9526383c3452df72d61cc6af4"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/TorusPhaseNets.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/TorusPhaseNets.lean",
+      "source_sha256": "c593f6d227021e52798fa9409023c88610637ae600c4493424c80a9b02a3cfb3"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/TranslatedTestTailBudget.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/TranslatedTestTailBudget.lean",
+      "source_sha256": "5dd9fcbb387fe92a141a5aab87387a2bac76fedf69ca2b8335f126be9739ac9e"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/UniformSchwartzTails.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/UniformSchwartzTails.lean",
+      "source_sha256": "520bb185136c4084582beb46d96203b8220dbd639895d499c56bbb5ea82e96f0"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/UnitPartition.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/UnitPartition.lean",
+      "source_sha256": "72787c3b08d37d344626688adccb085bb8c79c8f4926a4c03cb4b903a3465cc1"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/VariableActualGaugeAction.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/VariableActualGaugeAction.lean",
+      "source_sha256": "9b4b2fbe82013e9a5a424b91c0b894cd32277c008775e4894750ee96b265e3b8"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/VariableAxisWeights.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/VariableAxisWeights.lean",
+      "source_sha256": "42255faf9bf74ef691a37a4f920017e62110be4ec7d420fcf334f911e4b75fd5"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/VariableCoordinateOperators.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/VariableCoordinateOperators.lean",
+      "source_sha256": "4dd50294bfcc4d28099f1170971edf8761057dbf78b0241767b155e41b729a4e"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/VariableFullKernel.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/VariableFullKernel.lean",
+      "source_sha256": "71bf3824ac89b8e92464e86c299de4c929cd722377809eaabbbd65d45cd22fa4"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/VariableGaugeFactor.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/VariableGaugeFactor.lean",
+      "source_sha256": "1c5335ecc63b7bae794795a01c4cbdaaaa7e20b36ea43618d2955574f0b3ac9d"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/VariableGaugeRows.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/VariableGaugeRows.lean",
+      "source_sha256": "42ea36326f8a3ba8a6ffa6e16a43edb93f3229a997a8dd41f74a742fe6f06890"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/VariableGraphCorrections.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/VariableGraphCorrections.lean",
+      "source_sha256": "bd02281e9dbb69f59f5becc9a66ca70fb51a30d809c6268766e947ef50043d85"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/VariableGraphRemainder.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/VariableGraphRemainder.lean",
+      "source_sha256": "6f1e1a32ce74b43be2e8e74e8cf9497b1df1bc8870b039bd112166726de0737c"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/VariableMomentNormalization.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/VariableMomentNormalization.lean",
+      "source_sha256": "37ba78bf3473ebc970b1efbd2c3a7f6a0b5d576842e6126a18633c8685d7f99d"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/VariableNewtonOperators.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/VariableNewtonOperators.lean",
+      "source_sha256": "5f3acddf0e10a799ba42bdeaf1b94919bd60ffcb4190de75cb63ab9c4db96015"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/VariableNormalizedGauge.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/VariableNormalizedGauge.lean",
+      "source_sha256": "9bb3c0361a5bbe1ae1e94fbd4da65cf9b1f0f1b0012d3e3e463492c4e447a5df"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/VariablePairedPowers.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/VariablePairedPowers.lean",
+      "source_sha256": "184f9249f7e5c368e1b053e9b4660cb0ffc5716890207a9f5847202c8cc5e7ff"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/VariableSineOperators.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/VariableSineOperators.lean",
+      "source_sha256": "04a83e874ca3c4b68179a6fcdc0fbfe9c83ff60dd62d979aa3bc179a9ed0c089"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/VariableSourceFlags.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/VariableSourceFlags.lean",
+      "source_sha256": "db47c519044ad883276edc76f042be8449a384ef33ea5fe0d831a4571e79c6d8"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/VariableSourceGauge.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/VariableSourceGauge.lean",
+      "source_sha256": "b000628e1541b828856d1fcab79356cf587bdb3bcdc0e1b6d4e7e75776bf1156"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/VariableTangentWeights.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/VariableTangentWeights.lean",
+      "source_sha256": "0e3fd204a0d8b7f28e4ad816fafb177ba3025cb0b2c19f6435635b5937f0f938"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/ZakClusterExtraction.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/ZakClusterExtraction.lean",
+      "source_sha256": "08fb064d82e07379dff930019f6a3da143dccd94f457cedf3ea47e9af36acee0"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/ZakCompactChart.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/ZakCompactChart.lean",
+      "source_sha256": "d137a1210156bae6e3fad9c47e053d7129d85fa315c1ea265c0f4a97b2210108"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/ZakDistributionFamily.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/ZakDistributionFamily.lean",
+      "source_sha256": "541b13e5ac4fc26696e7a607a48f27f95a0b5e353989cad230a6056330585eb2"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/ZakFourierCoordinates.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/ZakFourierCoordinates.lean",
+      "source_sha256": "d3d607e1a491a26795f721cd61125ee828027f9ee517ae2a3be541609e7adc5e"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/ZakGaugeKernel.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/ZakGaugeKernel.lean",
+      "source_sha256": "7262b9d9bf951f8d8f0cb64dace60132b41aa15052ec1b750f36c219186d53e4"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/ZakIntegerCovariance.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/ZakIntegerCovariance.lean",
+      "source_sha256": "ed0c92fe15a394ed7f0f036af4a8ea4699c05b7e1764c4caaaa3802142f91dc1"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/ZakPeriodization.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/ZakPeriodization.lean",
+      "source_sha256": "fbbe38265301a72ce6c36e38a2696c817c0567f29240b2f119f30f27560fdf98"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/ZakSharpBounds.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/ZakSharpBounds.lean",
+      "source_sha256": "eda733c95ac10075e2cfe720e0a1e57d15538d32a27bd5f495d0fc4d69080325"
+    },
+    {
+      "path": "MeyerGeneralProblem/Cardinal/Adaptive/ZakTensorTests.lean",
+      "source_path": "lean/MeyerGeneralProblem/Cardinal/Adaptive/ZakTensorTests.lean",
+      "source_sha256": "aa0f8cf9f6da8c5e62f6c151c1a0cdf74d3cad77101d8e7cf1df37fa98e01f01"
+    },
+    {
+      "path": "MeyerGeneralProblem/Carrier/CanonicalClusterGeometry.lean",
+      "source_path": "lean/MeyerGeneralProblem/Carrier/CanonicalClusterGeometry.lean",
+      "source_sha256": "2c1a4616413fba0076ecbdb113df88d52c7859d7d212d046a08988f7abbe1212"
+    },
+    {
+      "path": "MeyerGeneralProblem/Carrier/CanonicalSourceBlocks.lean",
+      "source_path": "lean/MeyerGeneralProblem/Carrier/CanonicalSourceBlocks.lean",
+      "source_sha256": "a163f76600b3c458adbe81a1db94a64eccaa1c8c31d06500613cef7bfc716829"
+    },
+    {
+      "path": "MeyerGeneralProblem/Carrier/ClusterDecomposition.lean",
+      "source_path": "lean/MeyerGeneralProblem/Carrier/ClusterDecomposition.lean",
+      "source_sha256": "5d002b0e3d1b1c3cbfe79655ebf252b2386f0730d66b415ddadba08dfaee73f0"
+    },
+    {
+      "path": "MeyerGeneralProblem/Carrier/DensityPredicates.lean",
+      "source_path": "lean/MeyerGeneralProblem/Carrier/DensityPredicates.lean",
+      "source_sha256": "c4c3ca9752728a5903fa39b6eea594118c047c21fefa085db27fdbd1ce9a7458"
+    },
+    {
+      "path": "MeyerGeneralProblem/Carrier/Dilation.lean",
+      "source_path": "lean/MeyerGeneralProblem/Carrier/Dilation.lean",
+      "source_sha256": "8d49bb726fe0d3beb0693cdb82766bf331b42366aee290666728b32bb513908b"
+    },
+    {
+      "path": "MeyerGeneralProblem/Carrier/GeneralIsolation.lean",
+      "source_path": "lean/MeyerGeneralProblem/Carrier/GeneralIsolation.lean",
+      "source_sha256": "d417df422656bd12c3a5bc16d0869436c7cd21f6f33dd0d3f4465ba3a3b4a71e"
+    },
+    {
+      "path": "MeyerGeneralProblem/Carrier/GroupedLimitJets.lean",
+      "source_path": "lean/MeyerGeneralProblem/Carrier/GroupedLimitJets.lean",
+      "source_sha256": "a85ef336c183ef758f0c9fdb12ae1849528bc35408bfdf9d74fcb6e92ee40a96"
+    },
+    {
+      "path": "MeyerGeneralProblem/Carrier/HermiteMeasureSupport.lean",
+      "source_path": "lean/MeyerGeneralProblem/Carrier/HermiteMeasureSupport.lean",
+      "source_sha256": "851132eb51cddc4e43f1f41098160b555cea56caaf6163c7ceb78044a28f7934"
+    },
+    {
+      "path": "MeyerGeneralProblem/Carrier/HermiteSynthesis.lean",
+      "source_path": "lean/MeyerGeneralProblem/Carrier/HermiteSynthesis.lean",
+      "source_sha256": "b40eaf9c7495fe6eecddeb9315787b3e6538e6b712685b3664a3e90f1ecf5cd7"
+    },
+    {
+      "path": "MeyerGeneralProblem/Carrier/Indexed.lean",
+      "source_path": "lean/MeyerGeneralProblem/Carrier/Indexed.lean",
+      "source_sha256": "e9a680acf27e2000b9a6bae5c3dc0e474ebee39fe687676f0f01bf1026be6ddf"
+    },
+    {
+      "path": "MeyerGeneralProblem/Carrier/IndexedMultisetCompactness.lean",
+      "source_path": "lean/MeyerGeneralProblem/Carrier/IndexedMultisetCompactness.lean",
+      "source_sha256": "4a09b7a3aecb6af49b5e8d638c76d3a3828bc2fa30b808328eeb624e01bee8fb"
+    },
+    {
+      "path": "MeyerGeneralProblem/Carrier/IndexedMultisetCounts.lean",
+      "source_path": "lean/MeyerGeneralProblem/Carrier/IndexedMultisetCounts.lean",
+      "source_sha256": "50cc0674d6fbcb983548bf612b10f2ee45b06e325854124f8b71abae2b8d406e"
+    },
+    {
+      "path": "MeyerGeneralProblem/Carrier/Isolation.lean",
+      "source_path": "lean/MeyerGeneralProblem/Carrier/Isolation.lean",
+      "source_sha256": "5c7d14b24b4c019090c60da39060e4478fb6135f84a35a538259cf47b0c4c103"
+    },
+    {
+      "path": "MeyerGeneralProblem/Carrier/LocallyFinite.lean",
+      "source_path": "lean/MeyerGeneralProblem/Carrier/LocallyFinite.lean",
+      "source_sha256": "8f8a70365c9284b0bb9b5cd101cd4da95d46b9e39bc77854be912586e2541715"
+    },
+    {
+      "path": "MeyerGeneralProblem/Carrier/SignedSquare.lean",
+      "source_path": "lean/MeyerGeneralProblem/Carrier/SignedSquare.lean",
+      "source_sha256": "ad941898546b4b28a303b6fcd13c6439e8dcf827a5fb9a388ff4c0ea563621d5"
+    },
+    {
+      "path": "MeyerGeneralProblem/Carrier/SignedSquareCarrier.lean",
+      "source_path": "lean/MeyerGeneralProblem/Carrier/SignedSquareCarrier.lean",
+      "source_sha256": "2749e2b5cf168ccf65519d7d5945e702784371e531ef6f1b248b2747bc985223"
+    },
+    {
+      "path": "MeyerGeneralProblem/Carrier/SignedSquareSchur.lean",
+      "source_path": "lean/MeyerGeneralProblem/Carrier/SignedSquareSchur.lean",
+      "source_sha256": "fc4af7b53e7ee692764051ce7b4f17e31f4676d048dd432d5fa806c2f0576862"
+    },
+    {
+      "path": "MeyerGeneralProblem/Carrier/StrictSubcritical.lean",
+      "source_path": "lean/MeyerGeneralProblem/Carrier/StrictSubcritical.lean",
+      "source_sha256": "c6a3ae18701e93e5ff9daa6e33a53d016644019c3c8e5d69faa26a68d79d8dd9"
+    },
+    {
+      "path": "MeyerGeneralProblem/Carrier/TwoSided.lean",
+      "source_path": "lean/MeyerGeneralProblem/Carrier/TwoSided.lean",
+      "source_sha256": "30c609525fc84d60228bdecd1384c6056f8256ae5ae6d4c5cccb6ce7c1fa6020"
+    },
+    {
+      "path": "MeyerGeneralProblem/Carrier/UniformDensity.lean",
+      "source_path": "lean/MeyerGeneralProblem/Carrier/UniformDensity.lean",
+      "source_sha256": "780e1cf0dc38444f7a1ed91aa23d67efebeb1e5263374fa6509375132a7df93e"
+    },
+    {
+      "path": "MeyerGeneralProblem/Distribution/AtomicOnCarrier.lean",
+      "source_path": "lean/MeyerGeneralProblem/Distribution/AtomicOnCarrier.lean",
+      "source_sha256": "9efe4e79cf8f16ccb3d73a118d0a2873704ca7647f2ae16543b4e6df0fa2c6f8"
+    },
+    {
+      "path": "MeyerGeneralProblem/Distribution/BaseFiveMotifGeometry.lean",
+      "source_path": "lean/MeyerGeneralProblem/Distribution/BaseFiveMotifGeometry.lean",
+      "source_sha256": "5a583df22edc2c0f9b86beecac76da0f665af19a19860689ac91d61d407c8706"
+    },
+    {
+      "path": "MeyerGeneralProblem/Distribution/CarrierUnion.lean",
+      "source_path": "lean/MeyerGeneralProblem/Distribution/CarrierUnion.lean",
+      "source_sha256": "0574d4030edd6fc7e137939ecc11e93a8da3ab752de934ba7d5233230f8a92e8"
+    },
+    {
+      "path": "MeyerGeneralProblem/Distribution/ClosedSubmoduleAnnihilator.lean",
+      "source_path": "lean/MeyerGeneralProblem/Distribution/ClosedSubmoduleAnnihilator.lean",
+      "source_sha256": "db5d7051efae4ee5b244844d2428d623782e1e3fc0c2a875d2d5db33187ed038"
+    },
+    {
+      "path": "MeyerGeneralProblem/Distribution/CombScaling.lean",
+      "source_path": "lean/MeyerGeneralProblem/Distribution/CombScaling.lean",
+      "source_sha256": "836f7d4aebe6c9de14d26bd33d2a0e536a5958885607d6fda44f69bdb72a6e3f"
+    },
+    {
+      "path": "MeyerGeneralProblem/Distribution/CompactSchwartzDensity.lean",
+      "source_path": "lean/MeyerGeneralProblem/Distribution/CompactSchwartzDensity.lean",
+      "source_sha256": "2619b7e8ef8737e48e3f8e6613ddfd2aaffe0cf149286a688700978588e60116"
+    },
+    {
+      "path": "MeyerGeneralProblem/Distribution/CompactSmoothDivision.lean",
+      "source_path": "lean/MeyerGeneralProblem/Distribution/CompactSmoothDivision.lean",
+      "source_sha256": "887124f26b6e3ba8b65d54fe834af5b8ff39c00b53eb5dccf9ba78bfb3ac3ba3"
+    },
+    {
+      "path": "MeyerGeneralProblem/Distribution/ConvolvedMotifCoefficients.lean",
+      "source_path": "lean/MeyerGeneralProblem/Distribution/ConvolvedMotifCoefficients.lean",
+      "source_sha256": "ce6168738e532d359b6766b43c5f4facba347d14e771e41c94d65699ed451033"
+    },
+    {
+      "path": "MeyerGeneralProblem/Distribution/EscapingCombCarriers.lean",
+      "source_path": "lean/MeyerGeneralProblem/Distribution/EscapingCombCarriers.lean",
+      "source_sha256": "e77244e1b112119bc0279b70dc0dfb5ca8615b976eaa96eabbd8b75f69db3235"
+    },
+    {
+      "path": "MeyerGeneralProblem/Distribution/FiniteCombConvolution.lean",
+      "source_path": "lean/MeyerGeneralProblem/Distribution/FiniteCombConvolution.lean",
+      "source_sha256": "38575bf1a72ac8eb5575a1c77ca8d62fb4270597904f7a8726df0c1f3ac31a03"
+    },
+    {
+      "path": "MeyerGeneralProblem/Distribution/FiniteCombConvolutionSupport.lean",
+      "source_path": "lean/MeyerGeneralProblem/Distribution/FiniteCombConvolutionSupport.lean",
+      "source_sha256": "7c00c669d7f5bb73436bc3a593388a3069000c5f2dd25176a73e57dd84662540"
+    },
+    {
+      "path": "MeyerGeneralProblem/Distribution/FiniteFourierMotif.lean",
+      "source_path": "lean/MeyerGeneralProblem/Distribution/FiniteFourierMotif.lean",
+      "source_sha256": "d61ec3932b220d681f00971d291500793be2ac68a7592cbab3d682ad29f1c97e"
+    },
+    {
+      "path": "MeyerGeneralProblem/Distribution/FourthOrderHoleVector.lean",
+      "source_path": "lean/MeyerGeneralProblem/Distribution/FourthOrderHoleVector.lean",
+      "source_sha256": "24cfe9fa439fa3efe69d2518bf607d9d0e00918922da3493a9f3180f1ed0ae32"
+    },
+    {
+      "path": "MeyerGeneralProblem/Distribution/IntegerComb.lean",
+      "source_path": "lean/MeyerGeneralProblem/Distribution/IntegerComb.lean",
+      "source_sha256": "31230bdef60fd20e47e0aec30356bc21485d8c910098ff0d6faf0d4c8b6f2113"
+    },
+    {
+      "path": "MeyerGeneralProblem/Distribution/IrrationalCombCosets.lean",
+      "source_path": "lean/MeyerGeneralProblem/Distribution/IrrationalCombCosets.lean",
+      "source_sha256": "1602edf64afcbfea1cad21e3bc9d18a90af0fa841ed29673d1d659ae542ceb44"
+    },
+    {
+      "path": "MeyerGeneralProblem/Distribution/MeyerSpace.lean",
+      "source_path": "lean/MeyerGeneralProblem/Distribution/MeyerSpace.lean",
+      "source_sha256": "7a8ed7731a1a09e45885675dda0cae20209e3316258f5acc7e03de9f430dc393"
+    },
+    {
+      "path": "MeyerGeneralProblem/Distribution/PeriodicCombResidues.lean",
+      "source_path": "lean/MeyerGeneralProblem/Distribution/PeriodicCombResidues.lean",
+      "source_sha256": "c649a8f354e0f94c437998900aa7500cc4a8a01b6d6a2b68389b30d5d47243f2"
+    },
+    {
+      "path": "MeyerGeneralProblem/Distribution/PeriodicFourierHoleBlock.lean",
+      "source_path": "lean/MeyerGeneralProblem/Distribution/PeriodicFourierHoleBlock.lean",
+      "source_sha256": "098ee5efd8d8d1ae6e828e79c40b4ddf50c04d1c34223bd40e7ca7a3b70f3f96"
+    },
+    {
+      "path": "MeyerGeneralProblem/Distribution/PeriodicIntegerComb.lean",
+      "source_path": "lean/MeyerGeneralProblem/Distribution/PeriodicIntegerComb.lean",
+      "source_sha256": "1cd33c7979184b78df664fe2d9cade8cc3b5c051aa9e0735ed6cc7f96e053e76"
+    },
+    {
+      "path": "MeyerGeneralProblem/Distribution/ResidueLatticeComb.lean",
+      "source_path": "lean/MeyerGeneralProblem/Distribution/ResidueLatticeComb.lean",
+      "source_sha256": "8d3e4d5d026c7d63e554feca9109a0a5fe9cfed4d0658b668b7fbc552f3cf28c"
+    },
+    {
+      "path": "MeyerGeneralProblem/Distribution/SchwartzDividedDifferenceBounds.lean",
+      "source_path": "lean/MeyerGeneralProblem/Distribution/SchwartzDividedDifferenceBounds.lean",
+      "source_sha256": "58618aa1e85c119ae61759ba97723600a458ddb0b20cec8355bd79a9c9455eb3"
+    },
+    {
+      "path": "MeyerGeneralProblem/Distribution/SchwartzVanishing.lean",
+      "source_path": "lean/MeyerGeneralProblem/Distribution/SchwartzVanishing.lean",
+      "source_sha256": "db4369a1f50f2f1b5d0c46338112a1e244c9844f471b308fddc753f0fd07ad5a"
+    },
+    {
+      "path": "MeyerGeneralProblem/Distribution/ShiftedIntegerComb.lean",
+      "source_path": "lean/MeyerGeneralProblem/Distribution/ShiftedIntegerComb.lean",
+      "source_sha256": "29e5cceb3138ea1df79a782f74e4a7f12c20e1a5112691e58bf325f53becbe2f"
+    },
+    {
+      "path": "MeyerGeneralProblem/Distribution/SquareCyclicFourier.lean",
+      "source_path": "lean/MeyerGeneralProblem/Distribution/SquareCyclicFourier.lean",
+      "source_sha256": "5132664adf24ef621e77b8329d79722d750c28f71f172db7d4fe363d433c61d9"
+    },
+    {
+      "path": "MeyerGeneralProblem/Distribution/SquarePeriodicComb.lean",
+      "source_path": "lean/MeyerGeneralProblem/Distribution/SquarePeriodicComb.lean",
+      "source_sha256": "40cca2269d58c8046b6f431bd15126076b04fe1c28ef3fcd0f2dbb1758bc9f9c"
+    },
+    {
+      "path": "MeyerGeneralProblem/Distribution/SquarePeriodicCombSupport.lean",
+      "source_path": "lean/MeyerGeneralProblem/Distribution/SquarePeriodicCombSupport.lean",
+      "source_sha256": "58b7a0b5c5d8990218f69c1541e5e44b03b0bb3dcee519d62ed3c7f8ed9bb3ba"
+    },
+    {
+      "path": "MeyerGeneralProblem/Endpoint/ExponentialSqueeze.lean",
+      "source_path": "lean/MeyerGeneralProblem/Endpoint/ExponentialSqueeze.lean",
+      "source_sha256": "1ecf3cff1bc030e0a68d33b42846cc5d9ecbdae9540a75a10f4a69ce02b9343e"
+    },
+    {
+      "path": "MeyerGeneralProblem/Endpoint/IntrinsicFixedOrder.lean",
+      "source_path": "lean/MeyerGeneralProblem/Endpoint/IntrinsicFixedOrder.lean",
+      "source_sha256": "52c247fcae87ce3fad80787f3c0e2a368c332dc6bc07a53c89e180ad50c82d58"
+    },
+    {
+      "path": "MeyerGeneralProblem/Endpoint/LayerMonotonicity.lean",
+      "source_path": "lean/MeyerGeneralProblem/Endpoint/LayerMonotonicity.lean",
+      "source_sha256": "04b95a89c59dfde4bb394f6825311c3e96fb1040b72a0fc632afc64e08cdf7a3"
+    },
+    {
+      "path": "MeyerGeneralProblem/Endpoint/ReducedCross.lean",
+      "source_path": "lean/MeyerGeneralProblem/Endpoint/ReducedCross.lean",
+      "source_sha256": "c749eb0f4db91174c3e4143b17198f85e9eb18864ce0b25df21bb42144cc27ba"
+    },
+    {
+      "path": "MeyerGeneralProblem/Endpoint/WhitenedRange.lean",
+      "source_path": "lean/MeyerGeneralProblem/Endpoint/WhitenedRange.lean",
+      "source_sha256": "073b2ca7f07b4f87aa7529110693c17423e0b970fbfd83e8332c4af3c7a195a5"
+    },
+    {
+      "path": "MeyerGeneralProblem/FourierNormalization.lean",
+      "source_path": "lean/MeyerGeneralProblem/FourierNormalization.lean",
+      "source_sha256": "bc0858dd12e0efe57572a568ce16d0acea25d60abd95f854422689d463569a1b"
+    },
+    {
+      "path": "MeyerGeneralProblem/Gram/ClosedRange.lean",
+      "source_path": "lean/MeyerGeneralProblem/Gram/ClosedRange.lean",
+      "source_sha256": "a99a8ee7b13a35e168b877cc559c9f08f35d1fc1c6f9480eaf28b3b558ea9164"
+    },
+    {
+      "path": "MeyerGeneralProblem/Gram/CoefficientModel.lean",
+      "source_path": "lean/MeyerGeneralProblem/Gram/CoefficientModel.lean",
+      "source_sha256": "5ccc5d6454ddd379dfd0f3060f9d3e42ea2d1c75384b98c0a4de8e252b68c4d7"
+    },
+    {
+      "path": "MeyerGeneralProblem/Gram/CompactPositivePerturbation.lean",
+      "source_path": "lean/MeyerGeneralProblem/Gram/CompactPositivePerturbation.lean",
+      "source_sha256": "a18cc96d52fce63d440f830cac3b7442da617b913b5af945a16b78f7cc1544e0"
+    },
+    {
+      "path": "MeyerGeneralProblem/Gram/RationalDensity.lean",
+      "source_path": "lean/MeyerGeneralProblem/Gram/RationalDensity.lean",
+      "source_sha256": "12eead563c53f62cd486978788ed897dc0a9e121ab3b9d8e6b3284f063b680a5"
+    },
+    {
+      "path": "MeyerGeneralProblem/Gram/UniversalDecay.lean",
+      "source_path": "lean/MeyerGeneralProblem/Gram/UniversalDecay.lean",
+      "source_sha256": "f91b3e8dfa76b441e98f5a1dd539d627033a23402d99518322d1def503f5c404"
+    },
+    {
+      "path": "MeyerGeneralProblem/Gram/UniversalKernel.lean",
+      "source_path": "lean/MeyerGeneralProblem/Gram/UniversalKernel.lean",
+      "source_sha256": "3fdd11919ebb39fe973a73223ffc6238ac7a9e2d9ef6479091aab3f8f81be524"
+    },
+    {
+      "path": "MeyerGeneralProblem/Gram/UniversalOperator.lean",
+      "source_path": "lean/MeyerGeneralProblem/Gram/UniversalOperator.lean",
+      "source_sha256": "e5e4955115a17f19e022bc9c85a1b3fc9766904c64c342a37b370c2e3939a0b9"
+    },
+    {
+      "path": "MeyerGeneralProblem/Gram/Whitening.lean",
+      "source_path": "lean/MeyerGeneralProblem/Gram/Whitening.lean",
+      "source_sha256": "246c6185767f97895aebb635641ea7375bfc86a2373ca1fb9ed070d948c4689b"
+    },
+    {
+      "path": "MeyerGeneralProblem/Hermite/CutoffNorm.lean",
+      "source_path": "lean/MeyerGeneralProblem/Hermite/CutoffNorm.lean",
+      "source_sha256": "bada360ff91629f5d06d18a309af29532fed016e267796ee603a87dbb2a60e85"
+    },
+    {
+      "path": "MeyerGeneralProblem/Hermite/DistributionCoherence.lean",
+      "source_path": "lean/MeyerGeneralProblem/Hermite/DistributionCoherence.lean",
+      "source_sha256": "107ee4e8bae16e78dd9b6d29bc8b70caea9c9f7776de16bad9ac7f7b4791cf31"
+    },
+    {
+      "path": "MeyerGeneralProblem/Hermite/Exhaustion.lean",
+      "source_path": "lean/MeyerGeneralProblem/Hermite/Exhaustion.lean",
+      "source_sha256": "0faba5ca06af4c8d44943aa393fa7fef5b6eb9e15ae4ea837e8c45ef2fcb5e22"
+    },
+    {
+      "path": "MeyerGeneralProblem/Hermite/Functions.lean",
+      "source_path": "lean/MeyerGeneralProblem/Hermite/Functions.lean",
+      "source_sha256": "1eeebcd56a1740dd98525d7bfcf877e630de0ba6694747dbc3b7ab03fb3388f7"
+    },
+    {
+      "path": "MeyerGeneralProblem/Hermite/GeneralPointMassSupport.lean",
+      "source_path": "lean/MeyerGeneralProblem/Hermite/GeneralPointMassSupport.lean",
+      "source_sha256": "e42c65f52003fb4ba06f629b6a2073368d49c403f4651eec9d7fabb9740726e7"
+    },
+    {
+      "path": "MeyerGeneralProblem/Hermite/MehlerBounds.lean",
+      "source_path": "lean/MeyerGeneralProblem/Hermite/MehlerBounds.lean",
+      "source_sha256": "ada89e1e1cebc9fd40b9b68e851484ad3ff7a961f0d5c112eda052451962ab69"
+    },
+    {
+      "path": "MeyerGeneralProblem/Hermite/MehlerFormula.lean",
+      "source_path": "lean/MeyerGeneralProblem/Hermite/MehlerFormula.lean",
+      "source_sha256": "7862c60aa05cb04c919a49211dcf6d317a3438ac2754f97900ec98f1bdbf7fd9"
+    },
+    {
+      "path": "MeyerGeneralProblem/Hermite/MehlerKernel.lean",
+      "source_path": "lean/MeyerGeneralProblem/Hermite/MehlerKernel.lean",
+      "source_sha256": "e781553afa3ac50c26e96cd467a8efc6debf07c3c1646d18c437bb488a73ac7b"
+    },
+    {
+      "path": "MeyerGeneralProblem/Hermite/MehlerOffDiagonal.lean",
+      "source_path": "lean/MeyerGeneralProblem/Hermite/MehlerOffDiagonal.lean",
+      "source_sha256": "b4c665f480c25c298d9699573211a2cf9135ecd3fb5dd3a2c3bd5bd92fc15bb4"
+    },
+    {
+      "path": "MeyerGeneralProblem/Hermite/Orthonormal.lean",
+      "source_path": "lean/MeyerGeneralProblem/Hermite/Orthonormal.lean",
+      "source_sha256": "b33894e4b9788648c8d69f1839030257871987723efef808f99498f0168143a3"
+    },
+    {
+      "path": "MeyerGeneralProblem/Hermite/Scale.lean",
+      "source_path": "lean/MeyerGeneralProblem/Hermite/Scale.lean",
+      "source_sha256": "a80974d07bc4ebda5d4d348b69ecd545a453eb9e549d93352e2808b6abb0303e"
+    },
+    {
+      "path": "MeyerGeneralProblem/Hermite/ScaleEmbedding.lean",
+      "source_path": "lean/MeyerGeneralProblem/Hermite/ScaleEmbedding.lean",
+      "source_sha256": "152213626f81090b44d42ac53487765df33783317d2c9376c39a9bcf91139b8c"
+    },
+    {
+      "path": "MeyerGeneralProblem/Hilbert/CompactModels.lean",
+      "source_path": "lean/MeyerGeneralProblem/Hilbert/CompactModels.lean",
+      "source_sha256": "05f5f240ede869cf1d06884bb6db42098991eaf9510e1858e1f641874bb25428"
+    },
+    {
+      "path": "MeyerGeneralProblem/Hilbert/CompactPerturbation.lean",
+      "source_path": "lean/MeyerGeneralProblem/Hilbert/CompactPerturbation.lean",
+      "source_sha256": "fcb1b67991dacedb7e4be4860d459cee29fc2257b650d2cad926b6ab48858158"
+    },
+    {
+      "path": "MeyerGeneralProblem/Hilbert/FriedrichsAngle.lean",
+      "source_path": "lean/MeyerGeneralProblem/Hilbert/FriedrichsAngle.lean",
+      "source_sha256": "47e82b0b657001dbb6ff9a5ff1557cd780b436bc5f981f4eefa53cd001f21f60"
+    },
+    {
+      "path": "MeyerGeneralProblem/Hilbert/TwoProjections.lean",
+      "source_path": "lean/MeyerGeneralProblem/Hilbert/TwoProjections.lean",
+      "source_sha256": "bc1d5848b995b8d5656231a21046845c393fbf56328b9970d9fa3a49433b9019"
+    },
+    {
+      "path": "MeyerGeneralProblem/Interpolation/BlockOverlap.lean",
+      "source_path": "lean/MeyerGeneralProblem/Interpolation/BlockOverlap.lean",
+      "source_sha256": "0773a004de738f32c3af7a9ce401d5f89f3e51f340cbab63b077309f93311fb3"
+    },
+    {
+      "path": "MeyerGeneralProblem/Interpolation/BlockPartition.lean",
+      "source_path": "lean/MeyerGeneralProblem/Interpolation/BlockPartition.lean",
+      "source_sha256": "90f0455f5dd1dfbb7e5dc6e60e1516d48f39943ab8f6d655164af3da4224be4a"
+    },
+    {
+      "path": "MeyerGeneralProblem/Interpolation/ConfluentUnisolvence.lean",
+      "source_path": "lean/MeyerGeneralProblem/Interpolation/ConfluentUnisolvence.lean",
+      "source_sha256": "f47cf77fc5a97894ed7eb6bf61084771925121287a1c3c71870567930e208d82"
+    },
+    {
+      "path": "MeyerGeneralProblem/Interpolation/DividedDifference.lean",
+      "source_path": "lean/MeyerGeneralProblem/Interpolation/DividedDifference.lean",
+      "source_sha256": "088457c3dd4721b20c9433485ae1f93ed649b9e502ecd4e0c6ea02ce6d1da095"
+    },
+    {
+      "path": "MeyerGeneralProblem/Interpolation/GroupedSubdata.lean",
+      "source_path": "lean/MeyerGeneralProblem/Interpolation/GroupedSubdata.lean",
+      "source_sha256": "f5166998705f4021003b128f04760489103b16d6fb167746023dfeacd9efd821"
+    },
+    {
+      "path": "MeyerGeneralProblem/Interpolation/HermiteGenocchi.lean",
+      "source_path": "lean/MeyerGeneralProblem/Interpolation/HermiteGenocchi.lean",
+      "source_sha256": "07f58bfb5dcfbdef9f72cb3dc4f050e5b8038b3e760f249aba5531b1c6c05a14"
+    },
+    {
+      "path": "MeyerGeneralProblem/Interpolation/HermiteGenocchiHigher.lean",
+      "source_path": "lean/MeyerGeneralProblem/Interpolation/HermiteGenocchiHigher.lean",
+      "source_sha256": "f9753649fb0c9aeff27e2196c7a6380ebb1e8f7d997da6f95eee06c613fe4ae2"
+    },
+    {
+      "path": "MeyerGeneralProblem/Interpolation/HermiteGenocchiNodeMotion.lean",
+      "source_path": "lean/MeyerGeneralProblem/Interpolation/HermiteGenocchiNodeMotion.lean",
+      "source_sha256": "c0e5b874d27fd97cfcb4b78aca63ae4a8a7a8e365de8950f3af85f3d18f08cd4"
+    },
+    {
+      "path": "MeyerGeneralProblem/Interpolation/Leibniz.lean",
+      "source_path": "lean/MeyerGeneralProblem/Interpolation/Leibniz.lean",
+      "source_sha256": "632d95023e7f7b423df4662e696239a449ce3eecf4bc9fcaa4a19f09bccdb68f"
+    },
+    {
+      "path": "MeyerGeneralProblem/Interpolation/MovingDividedDifferences.lean",
+      "source_path": "lean/MeyerGeneralProblem/Interpolation/MovingDividedDifferences.lean",
+      "source_sha256": "fcca6b5815afcd81ad0b6cd809ff5b8015b15384ddde2a8f83654cbfdf21bebf"
+    },
+    {
+      "path": "MeyerGeneralProblem/Interpolation/NewtonPolynomial.lean",
+      "source_path": "lean/MeyerGeneralProblem/Interpolation/NewtonPolynomial.lean",
+      "source_sha256": "3b6e852c41a1f2459abb5c348362db32d624d501c5dadd542effe95a156b1411"
+    },
+    {
+      "path": "MeyerGeneralProblem/Interpolation/QuadraticDerivativeBounds.lean",
+      "source_path": "lean/MeyerGeneralProblem/Interpolation/QuadraticDerivativeBounds.lean",
+      "source_sha256": "25d3918495e96aeeacb7a8836d250d2a6b26c55f1fdc705a8ff9a06da3d47708"
+    },
+    {
+      "path": "MeyerGeneralProblem/Interpolation/UniformNewtonBounds.lean",
+      "source_path": "lean/MeyerGeneralProblem/Interpolation/UniformNewtonBounds.lean",
+      "source_sha256": "7d08a3e4148817ee69f51e0038a83e1dfd73f5be6b0f8aea4cecfb9b203c82c2"
+    },
+    {
+      "path": "MeyerGeneralProblem/Sampling/BernsteinGrowth.lean",
+      "source_path": "lean/MeyerGeneralProblem/Sampling/BernsteinGrowth.lean",
+      "source_sha256": "ac1fcab977974ef6dd191af2d8ea8c3c7f08847997fba07bf4ceac8ea6004bc1"
+    },
+    {
+      "path": "MeyerGeneralProblem/Sampling/BernsteinJensen.lean",
+      "source_path": "lean/MeyerGeneralProblem/Sampling/BernsteinJensen.lean",
+      "source_sha256": "843a2a98b6fb05258e5e4cc491d5ac56c6fb22826c2596d4d4712cd8dcba9526"
+    },
+    {
+      "path": "MeyerGeneralProblem/Sampling/BernsteinLocalizer.lean",
+      "source_path": "lean/MeyerGeneralProblem/Sampling/BernsteinLocalizer.lean",
+      "source_sha256": "71ede9c3178f88f0b36fdfbfd71803e5bfb12d03bb2048622b9c8ffeb5226c9f"
+    },
+    {
+      "path": "MeyerGeneralProblem/Sampling/BernsteinNormalFamily.lean",
+      "source_path": "lean/MeyerGeneralProblem/Sampling/BernsteinNormalFamily.lean",
+      "source_sha256": "aea256fc472d6d844fc14907416d7cef562ca8dd89207fb6698b2b50b11007fe"
+    },
+    {
+      "path": "MeyerGeneralProblem/Sampling/BernsteinZeroDensity.lean",
+      "source_path": "lean/MeyerGeneralProblem/Sampling/BernsteinZeroDensity.lean",
+      "source_sha256": "2d358b82f0105179aa577b4838b614af59860e336a95ae7bc1d3744c01c09b7a"
+    },
+    {
+      "path": "MeyerGeneralProblem/Sampling/BeurlingBiorthogonal.lean",
+      "source_path": "lean/MeyerGeneralProblem/Sampling/BeurlingBiorthogonal.lean",
+      "source_sha256": "4866cacfc83019651453af859fe391234a953bdd7874de54b7e74e9a768a32ca"
+    },
+    {
+      "path": "MeyerGeneralProblem/Sampling/BeurlingFiniteKernels.lean",
+      "source_path": "lean/MeyerGeneralProblem/Sampling/BeurlingFiniteKernels.lean",
+      "source_sha256": "5ff7fbc5fa580b7cfba2eef81e710b1a4ec52bd28fdf4cc7f7fb35b2ffea52e0"
+    },
+    {
+      "path": "MeyerGeneralProblem/Sampling/BeurlingInterpolation.lean",
+      "source_path": "lean/MeyerGeneralProblem/Sampling/BeurlingInterpolation.lean",
+      "source_sha256": "6a560c816ae82cac7101cbafafc06faeb5ebe90840abf1b2c355a3673f8b0f66"
+    },
+    {
+      "path": "MeyerGeneralProblem/Sampling/BeurlingSmoothing.lean",
+      "source_path": "lean/MeyerGeneralProblem/Sampling/BeurlingSmoothing.lean",
+      "source_sha256": "a6851b91bf155ca3eaf042ee70f2797bd2987ffd44de41d8b7919529616b53e8"
+    },
+    {
+      "path": "MeyerGeneralProblem/Sampling/BeurlingWindow.lean",
+      "source_path": "lean/MeyerGeneralProblem/Sampling/BeurlingWindow.lean",
+      "source_sha256": "0f448f47b6bf68dfe8b7c8f59f5638ff1d774171c4d269fe090f2c856e66da33"
+    },
+    {
+      "path": "MeyerGeneralProblem/Sampling/ClassicalFourierSobolev.lean",
+      "source_path": "lean/MeyerGeneralProblem/Sampling/ClassicalFourierSobolev.lean",
+      "source_sha256": "b3ef10ec5e87010d92c4c628726ccacfac7f0d1c27d077b7ba918a6bf40fcef5"
+    },
+    {
+      "path": "MeyerGeneralProblem/Sampling/CosineIngham.lean",
+      "source_path": "lean/MeyerGeneralProblem/Sampling/CosineIngham.lean",
+      "source_sha256": "c3c129781effa8fd118ceb041823ee89c944dc1ec3e471cc08e4307b4f9893ec"
+    },
+    {
+      "path": "MeyerGeneralProblem/Sampling/FourierBandCutoff.lean",
+      "source_path": "lean/MeyerGeneralProblem/Sampling/FourierBandCutoff.lean",
+      "source_sha256": "7e62185022923763f14813dcc470b0f52be14f156bd4c02337b316e5c85b7c78"
+    },
+    {
+      "path": "MeyerGeneralProblem/Sampling/FourierRectangle.lean",
+      "source_path": "lean/MeyerGeneralProblem/Sampling/FourierRectangle.lean",
+      "source_sha256": "bdce4226d84df795f290a46489068afd5d251a0e4ab4b997d4c7b24492a8cdb7"
+    },
+    {
+      "path": "MeyerGeneralProblem/Sampling/GroupedBernsteinSampling.lean",
+      "source_path": "lean/MeyerGeneralProblem/Sampling/GroupedBernsteinSampling.lean",
+      "source_sha256": "6716949620897fd7a3144a2eb77b5457576a9e8b525f0158e5c80e4f9576de65"
+    },
+    {
+      "path": "MeyerGeneralProblem/Sampling/GroupedBernsteinUniqueness.lean",
+      "source_path": "lean/MeyerGeneralProblem/Sampling/GroupedBernsteinUniqueness.lean",
+      "source_sha256": "00374aced86d9bd4a46d46039b0b21d56f842d989f1757a38751cd188a3ce91b"
+    },
+    {
+      "path": "MeyerGeneralProblem/Sampling/GroupedBiorthogonal.lean",
+      "source_path": "lean/MeyerGeneralProblem/Sampling/GroupedBiorthogonal.lean",
+      "source_sha256": "84adbc9c71d0f7ee035168786f2f7530c30433162a7d6675196466b2cc9282f6"
+    },
+    {
+      "path": "MeyerGeneralProblem/Sampling/GroupedClusterInsertion.lean",
+      "source_path": "lean/MeyerGeneralProblem/Sampling/GroupedClusterInsertion.lean",
+      "source_sha256": "7b7b6e1199b7209e469f8973b7fcd41ecb92f505aaaca6878ac101d769413e67"
+    },
+    {
+      "path": "MeyerGeneralProblem/Sampling/GroupedExponential.lean",
+      "source_path": "lean/MeyerGeneralProblem/Sampling/GroupedExponential.lean",
+      "source_sha256": "9f8600738990c1b5627121cc634384042e45581a17dd8eb1e33edb722e778745"
+    },
+    {
+      "path": "MeyerGeneralProblem/Sampling/GroupedExponentialUpper.lean",
+      "source_path": "lean/MeyerGeneralProblem/Sampling/GroupedExponentialUpper.lean",
+      "source_sha256": "dcceba98879c139375e365260a354cd23a9a839e731efb0b1d3101c54da433b1"
+    },
+    {
+      "path": "MeyerGeneralProblem/Sampling/GroupedFiniteFloor.lean",
+      "source_path": "lean/MeyerGeneralProblem/Sampling/GroupedFiniteFloor.lean",
+      "source_sha256": "0f258e7b4f8d5f0243948c8ce603abac8c856bcff0a7d618d7fae7543595ae17"
+    },
+    {
+      "path": "MeyerGeneralProblem/Sampling/GroupedHarauxInsertion.lean",
+      "source_path": "lean/MeyerGeneralProblem/Sampling/GroupedHarauxInsertion.lean",
+      "source_sha256": "0ba24f4d7d59e16df2809c09667c0c7796d6ad03ef2b93d09946165879e99003"
+    },
+    {
+      "path": "MeyerGeneralProblem/Sampling/GroupedHarauxRemoval.lean",
+      "source_path": "lean/MeyerGeneralProblem/Sampling/GroupedHarauxRemoval.lean",
+      "source_sha256": "5bb33fde33d454ace7cf827d940558b2bad3836f7d6a90113a10df22f1abf2df"
+    },
+    {
+      "path": "MeyerGeneralProblem/Sampling/GroupedLocalFloor.lean",
+      "source_path": "lean/MeyerGeneralProblem/Sampling/GroupedLocalFloor.lean",
+      "source_sha256": "52138fab5aee6b3598503940b933c906d0029309801dec5cf97bf07c4124e6be"
+    },
+    {
+      "path": "MeyerGeneralProblem/Sampling/GroupedPaleyWiener.lean",
+      "source_path": "lean/MeyerGeneralProblem/Sampling/GroupedPaleyWiener.lean",
+      "source_sha256": "a1192a19deb3fa93189bf4483731c0e083a4b1b400132f3861a71792f5423931"
+    },
+    {
+      "path": "MeyerGeneralProblem/Sampling/GroupedPaleyWienerSampling.lean",
+      "source_path": "lean/MeyerGeneralProblem/Sampling/GroupedPaleyWienerSampling.lean",
+      "source_sha256": "558fe349aaa3109070c2ff5dc919b7acb94cd58b1f8767d66dfd25469cd93d2f"
+    },
+    {
+      "path": "MeyerGeneralProblem/Sampling/GroupedSobolevSpectralGap.lean",
+      "source_path": "lean/MeyerGeneralProblem/Sampling/GroupedSobolevSpectralGap.lean",
+      "source_sha256": "8b4c5511faa54965401fe7c2cc3a899df36ab59cfd517055250ff6ab283cab6e"
+    },
+    {
+      "path": "MeyerGeneralProblem/Sampling/GroupedSpectralGap.lean",
+      "source_path": "lean/MeyerGeneralProblem/Sampling/GroupedSpectralGap.lean",
+      "source_sha256": "857f9daf0fecacc2db55a890c125f380c34b1f5c1dc1e86afcb1c01cc7837048"
+    },
+    {
+      "path": "MeyerGeneralProblem/Sampling/Ingham.lean",
+      "source_path": "lean/MeyerGeneralProblem/Sampling/Ingham.lean",
+      "source_sha256": "b9f1c2bd4a8db7e5c3d0fd8ee266182af3be2f2ecab2725938aab620631fb2bc"
+    },
+    {
+      "path": "MeyerGeneralProblem/Sampling/KNSGraphDerivative.lean",
+      "source_path": "lean/MeyerGeneralProblem/Sampling/KNSGraphDerivative.lean",
+      "source_sha256": "d803752c280d15652970f7e42871de2004dbca92874157392e62f34f360f1a9d"
+    },
+    {
+      "path": "MeyerGeneralProblem/Sampling/KNSGraphMixedCompletion.lean",
+      "source_path": "lean/MeyerGeneralProblem/Sampling/KNSGraphMixedCompletion.lean",
+      "source_sha256": "35192509cc41ba6bc539b27dea7d5aa3ac2dcc273214ebe78d48fb42dec4dd37"
+    },
+    {
+      "path": "MeyerGeneralProblem/Sampling/KNSGraphOscillator.lean",
+      "source_path": "lean/MeyerGeneralProblem/Sampling/KNSGraphOscillator.lean",
+      "source_sha256": "3703a107650916e5d8752f3bf64c80d09b36bcb2fbb47e40d60141356bf1169a"
+    },
+    {
+      "path": "MeyerGeneralProblem/Sampling/KNSGraphRepresentative.lean",
+      "source_path": "lean/MeyerGeneralProblem/Sampling/KNSGraphRepresentative.lean",
+      "source_sha256": "18f98c62f099889cfd06d0c2acbbca40bd9623670d69fc9c86257748bbbc0225"
+    },
+    {
+      "path": "MeyerGeneralProblem/Sampling/KNSGraphSchwartzComparison.lean",
+      "source_path": "lean/MeyerGeneralProblem/Sampling/KNSGraphSchwartzComparison.lean",
+      "source_sha256": "6ff41da72281c19a8388b53de3a021c3ef72dae5fef19ddce738f347997119ac"
+    },
+    {
+      "path": "MeyerGeneralProblem/Sampling/KNSGraphSpace.lean",
+      "source_path": "lean/MeyerGeneralProblem/Sampling/KNSGraphSpace.lean",
+      "source_sha256": "41f0b00fb16eb3c43137a668d7052e6b35adc50ece53a5487b61fcb4bc8a866d"
+    },
+    {
+      "path": "MeyerGeneralProblem/Sampling/KNSGraphSpaceFourier.lean",
+      "source_path": "lean/MeyerGeneralProblem/Sampling/KNSGraphSpaceFourier.lean",
+      "source_sha256": "8230c1d019882c5231c971124f5e930419029956d0d8a7bdde9b31154945c3ed"
+    },
+    {
+      "path": "MeyerGeneralProblem/Sampling/KNSGraphSpaceSmooth.lean",
+      "source_path": "lean/MeyerGeneralProblem/Sampling/KNSGraphSpaceSmooth.lean",
+      "source_sha256": "ccfacef1d12077f56bda12fadba7696e2535f0aa771ebec89ed305447bac6c55"
+    },
+    {
+      "path": "MeyerGeneralProblem/Sampling/KNSMixedWeightedSchwartz.lean",
+      "source_path": "lean/MeyerGeneralProblem/Sampling/KNSMixedWeightedSchwartz.lean",
+      "source_sha256": "0b6ab9adc4a49f1e9739cf139ffde7ae4f5ee8a8f213c2cdea6d2e082d347bfe"
+    },
+    {
+      "path": "MeyerGeneralProblem/Sampling/LocalSobolev.lean",
+      "source_path": "lean/MeyerGeneralProblem/Sampling/LocalSobolev.lean",
+      "source_sha256": "d3416d3aaf8d24e0fd9bae9eefbae5cc749bd635c8729659b1c466c3062defe9"
+    },
+    {
+      "path": "MeyerGeneralProblem/Sampling/PaleyWienerRepresentative.lean",
+      "source_path": "lean/MeyerGeneralProblem/Sampling/PaleyWienerRepresentative.lean",
+      "source_sha256": "d17c55492fad9541ad31a8473b8e09ac66b4638538889beefbf9c5e9bc983bfe"
+    },
+    {
+      "path": "MeyerGeneralProblem/Sampling/PositiveSeparation.lean",
+      "source_path": "lean/MeyerGeneralProblem/Sampling/PositiveSeparation.lean",
+      "source_sha256": "f2f909f6ae89a6e0b24de409e0033106108637d6a32e0acf0e2615062645bc34"
+    },
+    {
+      "path": "MeyerGeneralProblem/Sampling/SeparatedDecay.lean",
+      "source_path": "lean/MeyerGeneralProblem/Sampling/SeparatedDecay.lean",
+      "source_sha256": "3676d56478e49291c5de337ff730ab26b28b76748f250cda1127862ff4d90e2b"
+    },
+    {
+      "path": "MeyerGeneralProblem/Sampling/SignedSquareChartRemainder.lean",
+      "source_path": "lean/MeyerGeneralProblem/Sampling/SignedSquareChartRemainder.lean",
+      "source_sha256": "62b32dc295d7a267bfde112e394be83c5bfa7dcc6fa55ba44d8cfed0ddd4794b"
+    },
+    {
+      "path": "MeyerGeneralProblem/Sampling/SignedSquareCutoffTransfer.lean",
+      "source_path": "lean/MeyerGeneralProblem/Sampling/SignedSquareCutoffTransfer.lean",
+      "source_sha256": "e961a60975d7f9c6c058a3c359a56292d1cd72556538359f13f4c52539ce05a2"
+    },
+    {
+      "path": "MeyerGeneralProblem/Sampling/SignedSquareSobolevDomain.lean",
+      "source_path": "lean/MeyerGeneralProblem/Sampling/SignedSquareSobolevDomain.lean",
+      "source_sha256": "0d07a84b306a2b6914f1b3641e9b524fabe220af36414f3aa70a7d2ab598498f"
+    },
+    {
+      "path": "MeyerGeneralProblem/Sampling/SignedSquareWeightedChart.lean",
+      "source_path": "lean/MeyerGeneralProblem/Sampling/SignedSquareWeightedChart.lean",
+      "source_sha256": "35f4b6c049953fa9f4d9ed895e392e48fc32cb1554a767edafda849a2522c805"
+    },
+    {
+      "path": "MeyerGeneralProblem/Sampling/UpperLargeSieve.lean",
+      "source_path": "lean/MeyerGeneralProblem/Sampling/UpperLargeSieve.lean",
+      "source_sha256": "ff22ef751480753b5ceb3dff7a3a203edcf9d06331eea90d294623e60cd83c7c"
+    },
+    {
+      "path": "MeyerGeneralProblem/Sampling/WindowChoice.lean",
+      "source_path": "lean/MeyerGeneralProblem/Sampling/WindowChoice.lean",
+      "source_sha256": "aed15879a6cc7bd997cf122f1cf9accc1dd787e57e141c0ef6fc03caad85b978"
+    },
+    {
+      "path": "MeyerGeneralProblem/Trace/GroupedTrace.lean",
+      "source_path": "lean/MeyerGeneralProblem/Trace/GroupedTrace.lean",
+      "source_sha256": "80488a2c3f6c198a2204d609981e9478267eca3045fc5f0c55d3dcfb0f5f449d"
+    },
+    {
+      "path": "MeyerGeneralProblem/Trace/Presentation.lean",
+      "source_path": "lean/MeyerGeneralProblem/Trace/Presentation.lean",
+      "source_sha256": "0d3a6e9af72717ddc5789ae5a5d7234d8225cdf614440631c7efd66d7d5040b6"
+    },
+    {
+      "path": "MeyerGeneralProblem/Trace/System.lean",
+      "source_path": "lean/MeyerGeneralProblem/Trace/System.lean",
+      "source_sha256": "3a674a305144c3742272a098082b59712f75475fd64eb928c97bdf578c1f6b6b"
+    }
+  ]
+}

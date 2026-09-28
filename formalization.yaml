@@ -1,0 +1,121 @@
+# JSON syntax is valid YAML 1.2; this keeps preparation checks dependency-free.
+{
+  "version": "v0.4",
+  "project": {
+    "name": "A complete crystalline-measure space of countably infinite Hamel dimension",
+    "description": "There exists a locally finite set Λ in the real line such that the complete complex vector space of tempered distributions locally given by atomic measures on Λ, whose distributional Fourier transforms are also locally atomic on Λ, has Hamel dimension ℵ₀. A countable family gives a unique finite linear expansion of every admissible distribution, and every finite expansion is admissible. The theorem includes the equivalence between a Schwartz-vanishing-ideal definition and the local atomic formulas on both Fourier sides. Temperedness is distributional; no additional polynomial total-variation bound is assumed. This is an exhaustive occurrence result for one constructed carrier, not a classification of arbitrary carriers.",
+    "authors": [
+      "Jamie Martin",
+      "Li Shen"
+    ],
+    "responsible_maintainers": [
+      "Jamie Martin"
+    ],
+    "license": "MIT"
+  },
+  "classification": {
+    "arxiv": [
+      "math.CA",
+      "math.FA"
+    ],
+    "msc2020": [
+      "42A38",
+      "46F12",
+      "52C23"
+    ]
+  },
+  "sources": [
+    {
+      "title": "Cardinal question decided: aleph_0 occurs — adaptive reciprocal construction and target composition",
+      "authors": [
+        "Jamie Martin",
+        "Li Shen"
+      ],
+      "type": "other",
+      "id": "https://github.com/ls558/MeyerGeneralProblem/blob/aad158a9f4ba3c4db52385ef1856a918edc22c83/attempts/target-cardinal-closure/attempt-countable-cardinal-target-composition/artifacts/TARGET_COMPOSITION.md",
+      "relationship": "formalizes",
+      "author_endorsement": "participated",
+      "note": "The retained informal composition and its adaptive reciprocal prerequisites decide target-cardinal-closure, contract sha256:02d8c18d9acada486a25df5faa90c01491b0160c8a1133c5f93c0e87517363ca. The full result is distributionally tempered and exhausts the complete space. See docs/PROVENANCE.md for the subsequent formal implementation and historical review boundary. The source repository is private at preparation time, so its informal account cannot be independently confirmed by public readers; the full substantive Lean proof is included in this publication."
+    },
+    {
+      "title": "Measures with locally finite support and spectrum",
+      "authors": [
+        "Yves Meyer"
+      ],
+      "type": "paper",
+      "id": "doi:10.1073/pnas.1600685113",
+      "relationship": "background",
+      "author_endorsement": "not-contacted",
+      "note": "Background for the crystalline-measure problem. The precise distributional-tempered class of this submission is defined in Challenge and must not be silently identified with a stronger total-variation condition."
+    }
+  ],
+  "related_formalizations": [
+    {
+      "id": "https://github.com/ls558/MeyerGeneralProblem/tree/aad158a9f4ba3c4db52385ef1856a918edc22c83",
+      "relationship": "adapts",
+      "note": "Extracts the substantive recursive Lean proof closure of ConstructedAlgebraicBasis, preserving internal names and porting to the module system and newer pinned libraries. All substantive project proof sources needed by the submission are included here; this is not a thin wrapper importing the original repository."
+    },
+    {
+      "id": "https://github.com/balancedscorpion/shifted-square-root-fourier-classification/tree/8aa99c16d2733debd1fac67353b0206802ee52bb",
+      "relationship": "other",
+      "note": "Reviewed as a Palomar packaging reference only. It treats a different shifted-square-root classification and is not a mathematical or Lean dependency."
+    }
+  ],
+  "status": {
+    "scope": "Only the existence of a locally finite carrier with complete distributional Meyer Hamel rank ℵ₀ and unique finite synthesis. No geometric classification of all carriers, universal evaluator, separate arithmetic family, or strong total-variation version is submitted.",
+    "sorry_count": 0,
+    "sorry_in_definitions": 0,
+    "axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ],
+    "main_results": [
+      {
+        "declaration": "CountablyInfiniteCrystallineMeasures.exhaustiveCardinalClaim",
+        "file": "Solution.lean",
+        "comparator_config": "comparator.json",
+        "sorry_count": 0,
+        "axioms": [
+          "propext",
+          "Quot.sound",
+          "Classical.choice"
+        ],
+        "literature_dependencies": []
+      }
+    ],
+    "notes": "The proof-hole count refers to the proved Solution and its imported proof closure. Challenge contains one intentional theorem placeholder, never imported by Solution. No Palomar verification or registration is implied by this metadata."
+  },
+  "fidelity": {
+    "divergences": "The Palomar statement uses a bare subset of ℝ and ordinary local atomic formulas instead of the internal bundled locally finite carrier. It proves equivalence to the full internal distributional Meyer space and reindexes the reciprocal generator labels by ℕ. Fourier normalization is exp(-2πixξ). The rank is Hamel rank. Support containment, rather than equality, is required. Compact-test atomic formulas are not a claim of absolutely convergent sums on all Schwartz tests. Classical choice is used. No stronger polynomial total-variation hypothesis or conclusion is added."
+  },
+  "alignment": {
+    "namespace": "CountablyInfiniteCrystallineMeasures",
+    "statements": [
+      {
+        "source": "target-cardinal-closure, with complete actual-generator exhaustion",
+        "lean": "CountablyInfiniteCrystallineMeasures.exhaustiveCardinalClaim",
+        "module": "Solution.lean",
+        "note": "Combines exact countable rank, the local atomic membership equivalence, and unique finitely supported synthesis on the same constructed carrier."
+      }
+    ]
+  },
+  "automation": {
+    "methods": [
+      {
+        "method": "agent",
+        "tool_setup": "AI systems in the source MeyerGeneralProblem research and Lean development; exact historical model identities have not all been independently reconstructed. Source records include mathematical, adversarial and verification agent roles.",
+        "notes": "Historical source evidence is linked in docs/PROVENANCE.md. These roles are automated, not independent human peer review."
+      },
+      {
+        "method": "agent",
+        "tool_setup": "OpenAI Codex, GPT-6, September 2026.",
+        "notes": "Repository extraction, module-system and dependency migration, independent Challenge/Solution interface, publication metadata and verification scripts. No model is listed as an author or responsible maintainer."
+      }
+    ]
+  },
+  "review": {
+    "status": "self-assessed",
+    "notes": "The current preparation checks its source scope and builds the extracted proof; full outcomes are reported separately. No distinct independent review of the new port or Palomar editorial outcome is claimed. Earlier agent reviews at different commits are historical evidence only. Human authorship, maintainer and MIT licensing were confirmed by Jamie Martin."
+  }
+}
