@@ -46,6 +46,34 @@ theorem stageLeadingErrorConstant_prefix (p D N M : ℕ) (ζ : Fin N → Schwart
   rw [e.sum_comp (fun j => ∑ r, ‖T j r‖)] at hb
   exact hb
 
+/-- Transport the phase estimate before specializing the Hermite order. -/
+theorem phaseErrorConstantAtOrder_prefix (p q N M : ℕ) (hq : q ≤ liftOrder p) (ζ : Fin N → SchwartzMap ℝ ℂ)
+    (H S : ℝ) (hH : 0 ≤ H) (hS : 0 ≤ S)
+    (f : SchwartzMap ℝ ℂ) (hf : tsupport f ⊆ Set.Icc (-H) H) (A : ℝ) (hA : 0 ≤ A)
+    (hfA : ∀ r ≤ testOrder p, ∀ x, ‖iteratedDeriv r (f : ℝ → ℂ) x‖ ≤ A)
+    (η : ℝ) (hη : 0 ≤ η) (a b : Fin N → (Fin M × ReciprocalSign) → ℝ)
+    (ha : ∀ i j, |a i j| ≤ S) (hb : ∀ i j, |b i j| ≤ S)
+    (hab : ∀ i j, |a i j-b i j| ≤ η)
+    (T : (Fin M × ReciprocalSign) → HermiteScale (-(q : ℤ))) :
+    ‖∑ i, ∑ j,
+      (combDistributionTranslation (a i j) (hermiteScaleDistribution q (T j))
+        (SchwartzMap.smulLeftCLM ℂ (ζ i) f) -
+      combDistributionTranslation (b i j) (hermiteScaleDistribution q (T j))
+        (SchwartzMap.smulLeftCLM ℂ (ζ i) f))‖ ≤
+      phaseErrorConstantAtOrder p q N (2*M) hq ζ H S hH hS * A * η * ∑ j, ‖T j‖ := by
+  let e := prefixLabelEnumeration M
+  have hc := phaseErrorConstantAtOrder_spec p q N (2*M) hq ζ H S hH hS f hf A hA hfA η hη
+    (fun i j => a i (e j)) (fun i j => b i (e j)) (fun i j => ha i (e j))
+    (fun i j => hb i (e j)) (fun i j => hab i (e j)) (fun j => T (e j))
+  have hsum (i : Fin N) := e.sum_comp (fun j =>
+    combDistributionTranslation (a i j) (hermiteScaleDistribution q (T j))
+      (SchwartzMap.smulLeftCLM ℂ (ζ i) f) -
+    combDistributionTranslation (b i j) (hermiteScaleDistribution q (T j))
+      (SchwartzMap.smulLeftCLM ℂ (ζ i) f))
+  simp_rw [hsum] at hc
+  rw [e.sum_comp (fun j => ‖T j‖)] at hc
+  exact hc
+
 /-- The already selected phase constant controls the literal reciprocal-label sum. -/
 theorem stagePhaseErrorConstant_prefix (p N M : ℕ) (ζ : Fin N → SchwartzMap ℝ ℂ)
     (H S : ℝ) (hH : 0 ≤ H) (hS : 0 ≤ S)
@@ -60,19 +88,9 @@ theorem stagePhaseErrorConstant_prefix (p N M : ℕ) (ζ : Fin N → SchwartzMap
         (SchwartzMap.smulLeftCLM ℂ (ζ i) f) -
       combDistributionTranslation (b i j) (hermiteScaleDistribution (liftOrder p) (T j))
         (SchwartzMap.smulLeftCLM ℂ (ζ i) f))‖ ≤
-      stagePhaseErrorConstant p N (2*M) ζ H S hH hS * A * η * ∑ j, ‖T j‖ := by
-  let e := prefixLabelEnumeration M
-  have hc := stagePhaseErrorConstant_spec p N (2*M) ζ H S hH hS f hf A hA hfA η hη
-    (fun i j => a i (e j)) (fun i j => b i (e j)) (fun i j => ha i (e j))
-    (fun i j => hb i (e j)) (fun i j => hab i (e j)) (fun j => T (e j))
-  have hsum (i : Fin N) := e.sum_comp (fun j =>
-    combDistributionTranslation (a i j) (hermiteScaleDistribution (liftOrder p) (T j))
-      (SchwartzMap.smulLeftCLM ℂ (ζ i) f) -
-    combDistributionTranslation (b i j) (hermiteScaleDistribution (liftOrder p) (T j))
-      (SchwartzMap.smulLeftCLM ℂ (ζ i) f))
-  simp_rw [hsum] at hc
-  rw [e.sum_comp (fun j => ‖T j‖)] at hc
-  exact hc
+      stagePhaseErrorConstant p N (2*M) ζ H S hH hS * A * η * ∑ j, ‖T j‖ :=
+  phaseErrorConstantAtOrder_prefix p (liftOrder p) N M le_rfl ζ H S hH hS
+    f hf A hA hfA η hη a b ha hb hab T
 
 end
 end MeyerGeneralProblem.Adaptive

@@ -73,6 +73,114 @@ theorem norm_phase_sum_le_of_three_errors (F P A Z : ℂ) (ε B C : ℝ)
     _ ≤ ‖Z-A‖+‖A-P‖+‖P‖ := (norm_add_le _ _).trans (add_le_add (norm_add_le _ _) le_rfl)
     _ ≤ ε*(2*B+C) := by rw [norm_sub_rev Z A,norm_sub_rev A P]; nlinarith
 
+/-- Combine the finite error sums for distributions before specializing the
+Hermite coefficients. This keeps the finite-sum rewrites small. -/
+private theorem norm_phase_sum_le_of_polynomial_errors {ι κ : Type*} [Fintype ι] [Fintype κ]
+    (D : ℕ) (h : ι → ℝ) (a : ι → κ → ℝ) (g : ι → SchwartzMap ℝ ℂ)
+    (W : κ → Fin (D+1) → TemperedDistribution ℝ ℂ)
+    (future : TemperedDistribution ℝ ℂ) (ε B C : ℝ)
+    (hpoly : ∀ i, (∑ b, combDistributionTranslation (h i)
+      (∑ r, monomialDistribution r.val (W b r)) (g i)) =
+      -combDistributionTranslation (h i) future (g i))
+    (hlead : ‖∑ i, ∑ b, ∑ r : Fin (D+1), (((-(h i:ℂ))^D)⁻¹ *
+      combDistributionTranslation (h i) (monomialDistribution r.val (W b r)) (g i) -
+      (if r.val=D then combDistributionTranslation (h i) (W b r) (g i) else 0))‖ ≤ ε*B)
+    (hphase : ‖∑ i, ∑ b,
+      (combDistributionTranslation (h i) (W b ⟨D,Nat.lt_succ_self D⟩) (g i) -
+      combDistributionTranslation (a i b) (W b ⟨D,Nat.lt_succ_self D⟩) (g i))‖ ≤ ε*B)
+    (hfuture : ‖∑ i, ((-(h i:ℂ))^D)⁻¹ *
+      combDistributionTranslation (h i) future (g i)‖ ≤ ε*C) :
+    ‖∑ i, ∑ b, combDistributionTranslation (a i b)
+      (W b ⟨D,Nat.lt_succ_self D⟩) (g i)‖ ≤ ε*(2*B+C) := by
+  rw [summed_normalized_polynomial_error_identity] at hlead
+  simp only [Finset.sum_sub_distrib] at hphase
+  apply norm_phase_sum_le_of_three_errors _ _ _ _ _ B C _ hfuture hlead hphase
+  simp_rw [hpoly,mul_neg,Finset.sum_neg_distrib]
+
+/-- The finite two-phase argument combines supplied error bounds for
+distributions before the selected Hermite coefficients are inserted. -/
+private theorem top_coefficient_bound_of_stage_errors (ψ : SchwartzMap ℝ ℂ) (s : ℕ+ → ℝ)
+    (hs : ActualGoodScale ψ s) (n D : ℕ)
+    (V : (Fin (n+1) × ReciprocalSign) → Fin (D+1) → TemperedDistribution ℝ ℂ)
+    (hV : ∀ b r, combDistributionTranslation (labelScale s (prefixScaleIndex b.1,b.2))⁻¹
+      (V b r) = -V b r)
+    (B C : ℝ)
+    (pieces : (Fin (n+1) × ReciprocalSign) → TemperedDistribution ℝ ℂ)
+    (T : TemperedDistribution ℝ ℂ) (future : TemperedDistribution ℝ ℂ)
+    (hsplit : (∑ b, pieces b) + future = T)
+    (hlocal : ∀ b : Fin (n+1) × ReciprocalSign, DistributionVanishesOn
+      (physicalPeriodicSet (actualPositiveGaps ψ) s (prefixScaleIndex b.1,b.2))ᶜ
+      (pieces b-∑ r, monomialDistribution r.val (V b r)))
+    (L : LocallyFiniteCarrier) (hL : L.carrier ⊆ carrierSet (actualPositiveGaps ψ) s)
+    (hT : AtomicOnCarrier L T) (target : Fin (n+1) × ReciprocalSign)
+    (f : SchwartzMap ℝ ℂ) (hf : tsupport f ⊆ Icc (-(n+1:ℝ)) (n+1:ℝ))
+    (hleading : ∀ h : Fin (actualStage ψ n).partitionSize → ℝ,
+      (∀ i, (actualStage ψ n).translationStart ≤ h i) →
+      ‖∑ i, ∑ b, ∑ r : Fin (D+1),
+        (((-(h i:ℂ))^D)⁻¹ * combDistributionTranslation (h i)
+          (monomialDistribution r.val (V b r))
+            (SchwartzMap.smulLeftCLM ℂ ((actualStage ψ n).partition i) f) -
+        (if r.val = D then combDistributionTranslation (h i) (V b r)
+          (SchwartzMap.smulLeftCLM ℂ ((actualStage ψ n).partition i) f) else 0))‖ ≤
+        (2:ℝ)^(-((n+1:ℕ):ℤ))*B)
+    (hphaseBound : ∀ (flip : Bool) (c h : Fin (actualStage ψ n).partitionSize → ℝ),
+      (∀ i, |c i| ≤ (n+1:ℝ)) →
+      ∀ z : Fin (actualStage ψ n).partitionSize → (Fin (n+1) × ReciprocalSign) → ℤ,
+      (∀ i b, |h i-pieceTargetPhase s target (c i) flip b-
+        (z i b:ℝ)*(2/labelScale s (prefixScaleIndex b.1,b.2))| < (actualStage ψ n).phaseTolerance) →
+      ‖∑ i, ∑ b,
+        (combDistributionTranslation (h i) (V b ⟨D,Nat.lt_succ_self D⟩)
+          (SchwartzMap.smulLeftCLM ℂ ((actualStage ψ n).partition i) f) -
+        combDistributionTranslation (pieceTargetPhase s target (c i) flip b)
+          (V b ⟨D,Nat.lt_succ_self D⟩)
+          (SchwartzMap.smulLeftCLM ℂ ((actualStage ψ n).partition i) f))‖ ≤
+        (2:ℝ)^(-((n+1:ℕ):ℤ))*B)
+    (hfutureBound : ∀ h : Fin (actualStage ψ n).partitionSize → ℝ,
+      (∀ i, (actualStage ψ n).translationStart ≤ h i) →
+      (∀ i, h i ≤ (actualStage ψ n).translationBound) →
+      ‖∑ i, ((-(h i:ℂ))^D)⁻¹ * combDistributionTranslation (h i) future
+        (SchwartzMap.smulLeftCLM ℂ ((actualStage ψ n).partition i) f)‖ ≤
+        (2:ℝ)^(-((n+1:ℕ):ℤ))*C)
+    (δ : ℝ) (hδ : (actualStage ψ n).phaseTolerance ≤ δ)
+    (hmargin : ∀ x ∈ tsupport f, ∀ y : ℝ, |y-x| < δ →
+      y ∉ physicalPeriodicSet (actualPositiveGaps ψ) s (prefixScaleIndex target.1,target.2)) :
+    ‖V target ⟨D,Nat.lt_succ_self D⟩ f‖ ≤
+      (2:ℝ)^(-((n+1:ℕ):ℤ))*(2*B+C) := by
+  classical
+  let ζ := (actualStage ψ n).partition
+  let g (i : Fin (actualStage ψ n).partitionSize) := SchwartzMap.smulLeftCLM ℂ (ζ i) f
+  let c (i : Fin (actualStage ψ n).partitionSize) := testPieceCenter (g i)
+  let W (b : Fin (n+1) × ReciprocalSign) (r : Fin (D+1)) := V b r
+  let top : Fin (D+1) := ⟨D,Nat.lt_succ_self D⟩
+  obtain ⟨h,z,hh,hphase,havoid⟩ := exists_actualStage_avoiding_translations ψ s hs n target f δ hδ hmargin
+  have hg (i : Fin (actualStage ψ n).partitionSize) : tsupport (g i) ⊆ Icc (-(n+1:ℝ)) (n+1:ℝ) :=
+    fun _ hx => hf (SchwartzMap.tsupport_smulLeftCLM_subset _ _ hx).1
+  have hgc (i : Fin (actualStage ψ n).partitionSize) : HasCompactSupport (g i) :=
+    ((actualStage_laws ψ n).compact i).of_isClosed_subset (isClosed_tsupport _)
+      (fun _ hx => (SchwartzMap.tsupport_smulLeftCLM_subset _ _ hx).2)
+  have hc (i : Fin (actualStage ψ n).partitionSize) : |c i| ≤ (n+1:ℝ) :=
+    testPieceCenter_abs_le (g i) (n+1) (by positivity) (hg i)
+  have hdesired (flip : Bool) :
+      ‖∑ i, ∑ b, combDistributionTranslation (pieceTargetPhase s target (c i) flip b) (W b top) (g i)‖ ≤
+        (2:ℝ)^(-((n+1:ℕ):ℤ))*(2*B+C) := by
+    have hpoly (i : Fin (actualStage ψ n).partitionSize) :=
+      actualStage_prefix_polynomial_pairing_eq_neg_future ψ s hs n D W pieces T
+        future hsplit hlocal L hL hT (g i) (hgc i) (hg i) (h flip i)
+        (by rw [abs_of_nonneg ((actualStage ψ n).translationStart_nonneg.trans (hh flip i).1)]; exact (hh flip i).2)
+        (havoid flip i)
+    have hlead := hleading (h flip) (fun i => (hh flip i).1)
+    have hph := hphaseBound flip c (h flip) hc (z flip) (hphase flip)
+    have hfu := hfutureBound (h flip) (fun i => (hh flip i).1) (fun i => (hh flip i).2)
+    exact norm_phase_sum_le_of_polynomial_errors D (h flip)
+      (fun i b => pieceTargetPhase s target (c i) flip b) g W
+      future ((2:ℝ)^(-((n+1:ℕ):ℤ))) B C
+      hpoly hlead hph hfu
+  have hζ : ∀ x ∈ tsupport f, ∑ i, ζ i x = 1 := fun x hx =>
+    (actualStage_laws ψ n).sum_one x (by simpa only [PNat.mk_coe,Nat.cast_add,Nat.cast_one] using hf hx)
+  exact norm_le_of_two_phase_bounds
+    (partition_phase_flip_identity s target c (fun b => W b top) (hV target top) ζ f hζ)
+    (hdesired false) (hdesired true)
+
 /-- At one actual stage, the top coefficient is bounded by the three paid errors.
 The hypotheses are the finite whole-source split and the literal local polynomial
 agreement, precisely the outputs to be supplied by source splitting and the lift. -/
@@ -99,48 +207,22 @@ theorem actualStage_top_coefficient_pairing_bound (ψ : SchwartzMap ℝ ℂ) (s 
       y ∉ physicalPeriodicSet (actualPositiveGaps ψ) s (prefixScaleIndex target.1,target.2)) :
     ‖hermiteScaleDistribution (liftOrder p) (V target ⟨D,Nat.lt_succ_self D⟩) f‖ ≤
       (2:ℝ)^(-((n+1:ℕ):ℤ))*(2*B+‖future‖) := by
-  classical
-  let ζ := (actualStage ψ n).partition
-  let g (i : Fin (actualStage ψ n).partitionSize) := SchwartzMap.smulLeftCLM ℂ (ζ i) f
-  let c (i : Fin (actualStage ψ n).partitionSize) := testPieceCenter (g i)
-  let W (b : Fin (n+1) × ReciprocalSign) (r : Fin (D+1)) := hermiteScaleDistribution (liftOrder p) (V b r)
-  let top : Fin (D+1) := ⟨D,Nat.lt_succ_self D⟩
-  obtain ⟨h,z,hh,hphase,havoid⟩ := exists_actualStage_avoiding_translations ψ s hs n target f δ hδ hmargin
-  have hg (i : Fin (actualStage ψ n).partitionSize) : tsupport (g i) ⊆ Icc (-(n+1:ℝ)) (n+1:ℝ) :=
-    fun _ hx => hf (SchwartzMap.tsupport_smulLeftCLM_subset _ _ hx).1
-  have hgc (i : Fin (actualStage ψ n).partitionSize) : HasCompactSupport (g i) :=
-    ((actualStage_laws ψ n).compact i).of_isClosed_subset (isClosed_tsupport _)
-      (fun _ hx => (SchwartzMap.tsupport_smulLeftCLM_subset _ _ hx).2)
-  have hc (i : Fin (actualStage ψ n).partitionSize) : |c i| ≤ (n+1:ℝ) :=
-    testPieceCenter_abs_le (g i) (n+1) (by positivity) (hg i)
-  have hdesired (flip : Bool) :
-      ‖∑ i, ∑ b, combDistributionTranslation (pieceTargetPhase s target (c i) flip b) (W b top) (g i)‖ ≤
-        (2:ℝ)^(-((n+1:ℕ):ℤ))*(2*B+‖future‖) := by
-    have hpoly (i : Fin (actualStage ψ n).partitionSize) :=
-      actualStage_prefix_polynomial_pairing_eq_neg_future ψ s hs n D W pieces T
-        (hermiteScaleDistribution (6*p) future) hsplit hlocal L hL hT (g i) (hgc i) (hg i) (h flip i)
-        (by rw [abs_of_nonneg ((actualStage ψ n).translationStart_nonneg.trans (hh flip i).1)]; exact (hh flip i).2)
-        (havoid flip i)
-    have hlead := actualStage_leading_error_bound ψ n p D hp hD (h flip) (fun i => (hh flip i).1)
-      f hf hfA (fun b => (labelScale s (prefixScaleIndex b.1,b.2))⁻¹)
-      (fun b => physical_period_mem_Icc s hs.1.1 (prefixScaleIndex b.1,b.2)) V hV B hB hnorm
-    change ‖∑ i, ∑ b, ∑ r : Fin (D+1), (((-(h flip i:ℂ))^D)⁻¹ *
-      combDistributionTranslation (h flip i) (monomialDistribution r.val (W b r)) (g i) -
-      (if r.val=D then combDistributionTranslation (h flip i) (W b r) (g i) else 0))‖ ≤ _ at hlead
-    rw [summed_normalized_polynomial_error_identity] at hlead
-    have hph := actualStage_net_phase_error_bound ψ s hs n p hp target flip f hf hfA c (h flip) hc
-      (z flip) (hphase flip) (fun b => V b top) (fun b => hV b top) B hB (fun b => hnorm b top)
-    simp only [Finset.sum_sub_distrib] at hph
-    have hfu := actualStage_normalized_future_sum_bound ψ n p D hp future hfuture f hf hfA
-      (h flip) (fun i => (hh flip i).1) (fun i => (hh flip i).2)
-    apply norm_phase_sum_le_of_three_errors _ _ _ _ _ B ‖future‖ _ hfu hlead hph
-    simp_rw [hpoly,mul_neg,Finset.sum_neg_distrib]
-    rfl
-  have hζ : ∀ x ∈ tsupport f, ∑ i, ζ i x = 1 := fun x hx =>
-    (actualStage_laws ψ n).sum_one x (by simpa only [PNat.mk_coe,Nat.cast_add,Nat.cast_one] using hf hx)
-  exact norm_le_of_two_phase_bounds
-    (partition_phase_flip_identity s target c (fun b => W b top) (hV target top) ζ f hζ)
-    (hdesired false) (hdesired true)
+  apply top_coefficient_bound_of_stage_errors ψ s hs n D
+    (fun b r => hermiteScaleDistribution (liftOrder p) (V b r)) hV B ‖future‖
+    pieces T (hermiteScaleDistribution (6*p) future) hsplit hlocal L hL hT target f hf
+    ?_ ?_ ?_ δ hδ hmargin
+  · intro h hh
+    exact actualStage_leading_error_bound ψ n p D hp hD h hh f hf hfA
+      (fun b => (labelScale s (prefixScaleIndex b.1,b.2))⁻¹)
+      (fun b => physical_period_mem_Icc s hs.1.1 (prefixScaleIndex b.1,b.2))
+      V hV B hB hnorm
+  · intro flip c h hc z happrox
+    exact actualStage_net_phase_error_bound ψ s hs n p hp target flip f hf hfA c h hc
+      z happrox (fun b => V b ⟨D,Nat.lt_succ_self D⟩)
+      (fun b => hV b ⟨D,Nat.lt_succ_self D⟩) B hB
+      (fun b => hnorm b ⟨D,Nat.lt_succ_self D⟩)
+  · intro h hh₀ hh₁
+    exact actualStage_normalized_future_sum_bound ψ n p D hp future hfuture f hf hfA h hh₀ hh₁
 
 end
 end MeyerGeneralProblem.Adaptive

@@ -35,6 +35,14 @@ Solution locally disables the additional complex C*-algebra instance introduced
 by its proof imports, so both interfaces elaborate the topology on ℂ through
 the same normed-field instance. This changes no mathematical definition; it
 preserves the structural identity required by Comparator.
+The leading- and phase-error constants are selected at a general Hermite order
+and then specialized. They are definitionally the original choices. Their
+positivity, estimate and phase-prefix lemmas are also proved before specializing
+the order. Period reduction and the finite two-phase descent are proved for
+distributions before inserting the Hermite coefficients; the original theorem
+supplies all three established error bounds. These proof refactors preserve the
+existing theorem statements and avoid large intermediate specializations during
+independent kernel checking.
 
 | Publication object | Source correspondence |
 | --- | --- |

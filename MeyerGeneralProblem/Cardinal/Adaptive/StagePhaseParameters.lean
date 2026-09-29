@@ -14,25 +14,86 @@ without increasing the prescribed testOrder p.
 namespace MeyerGeneralProblem.Adaptive
 noncomputable section
 
+/-- Select the leading-error constant before specializing the Hermite order.
+Keeping that order as a parameter avoids expanding the specialized estimate
+inside the choice proof during independent kernel checking. -/
+def leadingErrorConstantAtOrder (p q D N L : ℕ) (hq : q ≤ liftOrder p)
+    (ζ : Fin N → SchwartzMap ℝ ℂ)
+    (H : ℝ) (hH : 0 ≤ H) : ℝ :=
+  Classical.choose (exists_partition_sum_leading_error_bound p q D N L hq ζ H hH)
+
 /-- A source-independent constant from the proved full leading-error estimate. -/
 def stageLeadingErrorConstant (p D N L : ℕ) (ζ : Fin N → SchwartzMap ℝ ℂ)
     (H : ℝ) (hH : 0 ≤ H) : ℝ :=
-  Classical.choose (exists_partition_sum_leading_error_bound p (liftOrder p) D N L le_rfl ζ H hH)
+  leadingErrorConstantAtOrder p (liftOrder p) D N L le_rfl ζ H hH
+
+/-- Select the phase-error constant with a general Hermite order, for the same
+reason as `leadingErrorConstantAtOrder`. -/
+def phaseErrorConstantAtOrder (p q N L : ℕ) (hq : q ≤ liftOrder p)
+    (ζ : Fin N → SchwartzMap ℝ ℂ)
+    (H S : ℝ) (hH : 0 ≤ H) (hS : 0 ≤ S) : ℝ :=
+  Classical.choose (exists_partition_sum_phase_error_bound p q N L hq ζ H S hH hS)
 
 /-- A source-independent constant from the proved full phase-error estimate. -/
 def stagePhaseErrorConstant (p N L : ℕ) (ζ : Fin N → SchwartzMap ℝ ℂ)
     (H S : ℝ) (hH : 0 ≤ H) (hS : 0 ≤ S) : ℝ :=
-  Classical.choose (exists_partition_sum_phase_error_bound p (liftOrder p) N L le_rfl ζ H S hH hS)
+  phaseErrorConstantAtOrder p (liftOrder p) N L le_rfl ζ H S hH hS
+
+/-- Positivity before specializing the Hermite order. -/
+theorem leadingErrorConstantAtOrder_pos (p q D N L : ℕ) (hq : q ≤ liftOrder p)
+    (ζ : Fin N → SchwartzMap ℝ ℂ) (H : ℝ) (hH : 0 ≤ H) :
+    0 < leadingErrorConstantAtOrder p q D N L hq ζ H hH :=
+  (Classical.choose_spec (exists_partition_sum_leading_error_bound p q D N L hq ζ H hH)).1
+
+/-- Positivity before specializing the Hermite order. -/
+theorem phaseErrorConstantAtOrder_pos (p q N L : ℕ) (hq : q ≤ liftOrder p)
+    (ζ : Fin N → SchwartzMap ℝ ℂ) (H S : ℝ) (hH : 0 ≤ H) (hS : 0 ≤ S) :
+    0 < phaseErrorConstantAtOrder p q N L hq ζ H S hH hS :=
+  (Classical.choose_spec (exists_partition_sum_phase_error_bound p q N L hq ζ H S hH hS)).1
+
+/-- The complete estimate before specializing the Hermite order. -/
+theorem leadingErrorConstantAtOrder_spec (p q D N L : ℕ) (hq : q ≤ liftOrder p) (ζ : Fin N → SchwartzMap ℝ ℂ)
+    (H : ℝ) (hH : 0 ≤ H) :
+    ∀ H₀ : ℝ, 1 ≤ H₀ → ∀ h : Fin N → ℝ, (∀ i, H₀ ≤ h i) →
+      ∀ f : SchwartzMap ℝ ℂ, tsupport f ⊆ Set.Icc (-H) H → ∀ A : ℝ, 0 ≤ A →
+      (∀ n ≤ testOrder p, ∀ x, ‖iteratedDeriv n (f : ℝ → ℂ) x‖ ≤ A) →
+      ∀ P : Fin L → ℝ, (∀ j, P j ∈ Set.Icc (1/2:ℝ) 2) →
+      ∀ T : Fin L → Fin (D+1) → HermiteScale (-(q : ℤ)),
+      (∀ j r, combDistributionTranslation (P j) (hermiteScaleDistribution q (T j r)) =
+        -hermiteScaleDistribution q (T j r)) →
+      ‖∑ i, ∑ j, ∑ r : Fin (D+1),
+        (((-(h i:ℂ))^D)⁻¹ * combDistributionTranslation (h i)
+          (monomialDistribution r.val (hermiteScaleDistribution q (T j r))) (SchwartzMap.smulLeftCLM ℂ (ζ i) f) -
+        (if r.val = D then combDistributionTranslation (h i) (hermiteScaleDistribution q (T j r))
+          (SchwartzMap.smulLeftCLM ℂ (ζ i) f) else 0))‖ ≤
+        leadingErrorConstantAtOrder p q D N L hq ζ H hH*A/H₀*(∑ j, ∑ r, ‖T j r‖) :=
+  (Classical.choose_spec (exists_partition_sum_leading_error_bound p q D N L hq ζ H hH)).2
+
+/-- The complete estimate before specializing the Hermite order. -/
+theorem phaseErrorConstantAtOrder_spec (p q N L : ℕ) (hq : q ≤ liftOrder p) (ζ : Fin N → SchwartzMap ℝ ℂ)
+    (H S : ℝ) (hH : 0 ≤ H) (hS : 0 ≤ S) :
+    ∀ f : SchwartzMap ℝ ℂ, tsupport f ⊆ Set.Icc (-H) H → ∀ A : ℝ, 0 ≤ A →
+      (∀ r ≤ testOrder p, ∀ x, ‖iteratedDeriv r (f : ℝ → ℂ) x‖ ≤ A) →
+      ∀ η : ℝ, 0 ≤ η → ∀ a b : Fin N → Fin L → ℝ,
+      (∀ i j, |a i j| ≤ S) → (∀ i j, |b i j| ≤ S) →
+      (∀ i j, |a i j-b i j| ≤ η) → ∀ T : Fin L → HermiteScale (-(q : ℤ)),
+      ‖∑ i, ∑ j,
+        (combDistributionTranslation (a i j) (hermiteScaleDistribution q (T j))
+          (SchwartzMap.smulLeftCLM ℂ (ζ i) f) -
+        combDistributionTranslation (b i j) (hermiteScaleDistribution q (T j))
+          (SchwartzMap.smulLeftCLM ℂ (ζ i) f))‖ ≤
+        phaseErrorConstantAtOrder p q N L hq ζ H S hH hS * A * η * ∑ j, ‖T j‖ :=
+  (Classical.choose_spec (exists_partition_sum_phase_error_bound p q N L hq ζ H S hH hS)).2
 
 /-- The selected leading constant is strictly positive. -/
 theorem stageLeadingErrorConstant_pos (p D N L : ℕ) (ζ : Fin N → SchwartzMap ℝ ℂ)
     (H : ℝ) (hH : 0 ≤ H) : 0 < stageLeadingErrorConstant p D N L ζ H hH :=
-  (Classical.choose_spec (exists_partition_sum_leading_error_bound p (liftOrder p) D N L le_rfl ζ H hH)).1
+  leadingErrorConstantAtOrder_pos p (liftOrder p) D N L le_rfl ζ H hH
 
 /-- The selected phase constant is strictly positive. -/
 theorem stagePhaseErrorConstant_pos (p N L : ℕ) (ζ : Fin N → SchwartzMap ℝ ℂ)
     (H S : ℝ) (hH : 0 ≤ H) (hS : 0 ≤ S) : 0 < stagePhaseErrorConstant p N L ζ H S hH hS :=
-  (Classical.choose_spec (exists_partition_sum_phase_error_bound p (liftOrder p) N L le_rfl ζ H S hH hS)).1
+  phaseErrorConstantAtOrder_pos p (liftOrder p) N L le_rfl ζ H S hH hS
 
 /-- The selected leading constant retains the complete actual-source inequality. -/
 theorem stageLeadingErrorConstant_spec (p D N L : ℕ) (ζ : Fin N → SchwartzMap ℝ ℂ)
@@ -50,7 +111,7 @@ theorem stageLeadingErrorConstant_spec (p D N L : ℕ) (ζ : Fin N → SchwartzM
         (if r.val = D then combDistributionTranslation (h i) (hermiteScaleDistribution (liftOrder p) (T j r))
           (SchwartzMap.smulLeftCLM ℂ (ζ i) f) else 0))‖ ≤
         stageLeadingErrorConstant p D N L ζ H hH*A/H₀*(∑ j, ∑ r, ‖T j r‖) :=
-  (Classical.choose_spec (exists_partition_sum_leading_error_bound p (liftOrder p) D N L le_rfl ζ H hH)).2
+  leadingErrorConstantAtOrder_spec p (liftOrder p) D N L le_rfl ζ H hH
 
 /-- The selected phase constant retains the complete actual-source inequality. -/
 theorem stagePhaseErrorConstant_spec (p N L : ℕ) (ζ : Fin N → SchwartzMap ℝ ℂ)
@@ -66,7 +127,7 @@ theorem stagePhaseErrorConstant_spec (p N L : ℕ) (ζ : Fin N → SchwartzMap �
         combDistributionTranslation (b i j) (hermiteScaleDistribution (liftOrder p) (T j))
           (SchwartzMap.smulLeftCLM ℂ (ζ i) f))‖ ≤
         stagePhaseErrorConstant p N L ζ H S hH hS * A * η * ∑ j, ‖T j‖ :=
-  (Classical.choose_spec (exists_partition_sum_phase_error_bound p (liftOrder p) N L le_rfl ζ H S hH hS)).2
+  phaseErrorConstantAtOrder_spec p (liftOrder p) N L le_rfl ζ H S hH hS
 
 private theorem finite_double_sum_bound {ι κ : Type*} [Fintype ι] [Fintype κ]
     (f : ι → κ → ℝ) (hf : ∀ i j, 0 ≤ f i j) (i : ι) (j : κ) :

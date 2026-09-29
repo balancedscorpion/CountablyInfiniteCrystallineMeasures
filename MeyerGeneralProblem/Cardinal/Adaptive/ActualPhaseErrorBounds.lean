@@ -105,6 +105,58 @@ theorem actualStage_phase_error_bound (ψ : SchwartzMap ℝ ℂ) (n p : ℕ) (hp
       mul_le_mul hpaid hsum (Finset.sum_nonneg (fun _ _ => norm_nonneg _)) (by positivity)
     _ = (2:ℝ)^(-((n+1:ℕ):ℤ))*B := by rw [← mul_assoc,div_mul_cancel₀ _ hcount.ne']
 
+/-- Reduce long translations to compact phase representatives for distributions,
+before inserting the Hermite coefficients and their proved phase budget. -/
+private theorem net_phase_error_bound_of_phase_bound (ψ : SchwartzMap ℝ ℂ) (s : ℕ+ → ℝ)
+    (hs : ActualGoodScale ψ s) (n : ℕ)
+    (target : Fin (n+1) × ReciprocalSign) (flip : Bool)
+    (f : SchwartzMap ℝ ℂ)
+    (c h : Fin (actualStage ψ n).partitionSize → ℝ)
+    (hc : ∀ i, |c i| ≤ (n+1:ℝ))
+    (z : Fin (actualStage ψ n).partitionSize → (Fin (n+1) × ReciprocalSign) → ℤ)
+    (happrox : ∀ i b, |h i-pieceTargetPhase s target (c i) flip b-
+      (z i b:ℝ)*(2/labelScale s (prefixScaleIndex b.1,b.2))| < (actualStage ψ n).phaseTolerance)
+    (T : (Fin (n+1) × ReciprocalSign) → TemperedDistribution ℝ ℂ)
+    (hT : ∀ b, combDistributionTranslation (labelScale s (prefixScaleIndex b.1,b.2))⁻¹
+      (T b) = -T b)
+    (B : ℝ)
+    (hphase : ∀ a b : Fin (actualStage ψ n).partitionSize → (Fin (n+1) × ReciprocalSign) → ℝ,
+      (∀ i j, |a i j| ≤ (n+1:ℝ)+4) → (∀ i j, |b i j| ≤ (n+1:ℝ)+4) →
+      (∀ i j, |a i j-b i j| ≤ (actualStage ψ n).phaseTolerance) →
+      ‖∑ i, ∑ j,
+        (combDistributionTranslation (a i j) (T j)
+          (SchwartzMap.smulLeftCLM ℂ ((actualStage ψ n).partition i) f) -
+        combDistributionTranslation (b i j) (T j)
+          (SchwartzMap.smulLeftCLM ℂ ((actualStage ψ n).partition i) f))‖ ≤ B) :
+    ‖∑ i, ∑ b,
+      (combDistributionTranslation (h i) (T b)
+        (SchwartzMap.smulLeftCLM ℂ ((actualStage ψ n).partition i) f) -
+      combDistributionTranslation (pieceTargetPhase s target (c i) flip b)
+        (T b)
+        (SchwartzMap.smulLeftCLM ℂ ((actualStage ψ n).partition i) f))‖ ≤
+      B := by
+  let a (i : Fin (actualStage ψ n).partitionSize) (b : Fin (n+1) × ReciprocalSign) :=
+    h i-(z i b:ℝ)*(2/labelScale s (prefixScaleIndex b.1,b.2))
+  have hdesired i b := pieceTargetPhase_abs_le s hs.1.1 target (c i) (n+1) (by positivity) (hc i) flip b
+  have hrep (i : Fin (actualStage ψ n).partitionSize) (b : Fin (n+1) × ReciprocalSign) := physical_phase_representative s (prefixScaleIndex b.1,b.2)
+    (T b) (hT b) (h i)
+    (pieceTargetPhase s target (c i) flip b) (actualStage ψ n).phaseTolerance ((n+1:ℝ)+2)
+    (z i b) (hdesired i b) (happrox i b)
+  have heta : (actualStage ψ n).phaseTolerance ≤ 1 := by
+    have he := (actualStage_laws ψ n).phase_stage
+    have hM : (1:ℝ) ≤ n+1 := by linarith [Nat.cast_nonneg (α:=ℝ) n]
+    have hd : 1/(n+1:ℝ) ≤ 1 := by apply (div_le_one (by positivity)).mpr; exact hM
+    simpa only [PNat.mk_coe,Nat.cast_add,Nat.cast_one] using he.trans (by
+      simpa only [PNat.mk_coe,Nat.cast_add,Nat.cast_one] using hd)
+  have hbound := hphase a
+    (fun i b => pieceTargetPhase s target (c i) flip b)
+    (fun i b => (hrep i b).2.1.trans (by linarith))
+    (fun i b => (hdesired i b).trans (by linarith))
+    (fun i b => (hrep i b).1.le)
+  have heq : ∀ i b, combDistributionTranslation (a i b) (T b) =
+      combDistributionTranslation (h i) (T b) := fun i b => (hrep i b).2.2
+  simpa only [heq] using hbound
+
 /-- Literal long net translations obey the paid phase budget after their exact
 integer-period reduction; compact phase representatives have size at most M+3. -/
 theorem actualStage_net_phase_error_bound (ψ : SchwartzMap ℝ ℂ) (s : ℕ+ → ℝ)
@@ -128,27 +180,11 @@ theorem actualStage_net_phase_error_bound (ψ : SchwartzMap ℝ ℂ) (s : ℕ+ �
         (hermiteScaleDistribution (liftOrder p) (T b))
         (SchwartzMap.smulLeftCLM ℂ ((actualStage ψ n).partition i) f))‖ ≤
       (2:ℝ)^(-((n+1:ℕ):ℤ))*B := by
-  let a (i : Fin (actualStage ψ n).partitionSize) (b : Fin (n+1) × ReciprocalSign) :=
-    h i-(z i b:ℝ)*(2/labelScale s (prefixScaleIndex b.1,b.2))
-  have hdesired i b := pieceTargetPhase_abs_le s hs.1.1 target (c i) (n+1) (by positivity) (hc i) flip b
-  have hrep (i : Fin (actualStage ψ n).partitionSize) (b : Fin (n+1) × ReciprocalSign) := physical_phase_representative s (prefixScaleIndex b.1,b.2)
-    (hermiteScaleDistribution (liftOrder p) (T b)) (hT b) (h i)
-    (pieceTargetPhase s target (c i) flip b) (actualStage ψ n).phaseTolerance ((n+1:ℝ)+2)
-    (z i b) (hdesired i b) (happrox i b)
-  have heta : (actualStage ψ n).phaseTolerance ≤ 1 := by
-    have he := (actualStage_laws ψ n).phase_stage
-    have hM : (1:ℝ) ≤ n+1 := by linarith [Nat.cast_nonneg (α:=ℝ) n]
-    have hd : 1/(n+1:ℝ) ≤ 1 := by apply (div_le_one (by positivity)).mpr; exact hM
-    simpa only [PNat.mk_coe,Nat.cast_add,Nat.cast_one] using he.trans (by
-      simpa only [PNat.mk_coe,Nat.cast_add,Nat.cast_one] using hd)
-  have hbound := actualStage_phase_error_bound ψ n p hp f hf hfA a
-    (fun i b => pieceTargetPhase s target (c i) flip b)
-    (fun i b => (hrep i b).2.1.trans (by linarith))
-    (fun i b => (hdesired i b).trans (by linarith))
-    (fun i b => (hrep i b).1.le) T B hB hnorm
-  have heq : ∀ i b, combDistributionTranslation (a i b) (hermiteScaleDistribution (liftOrder p) (T b)) =
-      combDistributionTranslation (h i) (hermiteScaleDistribution (liftOrder p) (T b)) := fun i b => (hrep i b).2.2
-  simpa only [heq] using hbound
+  apply net_phase_error_bound_of_phase_bound ψ s hs n target flip f c h hc z happrox
+    (fun b => hermiteScaleDistribution (liftOrder p) (T b)) hT
+    ((2:ℝ)^(-((n+1:ℕ):ℤ))*B)
+  intro a b ha hb hab
+  exact actualStage_phase_error_bound ψ n p hp f hf hfA a b ha hb hab T B hB hnorm
 
 /-- Normalizing any nonnegative degree at a stage translation cannot increase a pairing. -/
 theorem norm_leading_normalization_le_one (D : ℕ) (h : ℝ) (hh : 1 ≤ h) :
