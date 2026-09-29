@@ -1,41 +1,17 @@
 # Countably infinite crystalline-measure spaces
 
-There exists a locally finite carrier **Λ ⊂ ℝ whose complete distributional
-Meyer space has complex Hamel dimension ℵ₀**. Every member of that space is a
-unique **finite** linear combination of a countable family of generators.
-The result concerns the whole admissible space, not a selected countable
-subspace of a larger space.
+Crystalline measures are atomic measures whose support and Fourier spectrum are both locally finite. They extend Poisson summation beyond periodic lattice combs and form part of Meyer's programme of understanding simultaneous discreteness in physical and Fourier space. Given a locally finite carrier $\Lambda\subset\mathbb R$, let $\mathcal M_\Lambda$ denote the complete complex vector space of tempered distributions for which both $T$ and its distributional Fourier transform are locally atomic with support contained in $\Lambda$. A basic structural question is which algebraic dimensions can occur for these carrier-defined spaces.
 
-For a locally finite Λ, let MΛ consist of the continuous complex linear
-functionals on Schwartz space for which both T and its distributional Fourier
-transform have a local atomic representation on Λ. In ordinary notation,
+We prove that countably infinite dimension occurs. More precisely, we construct a locally finite $\Lambda\subset\mathbb R$ and a sequence $(g_n)_{n\in\mathbb N}$ such that
+$$
+\mathcal M_\Lambda
+=
+\bigoplus_{n\in\mathbb N}\mathbb C g_n
+\cong_{\mathbb C}\mathbb C^{(\mathbb N)}.
+$$
+Thus every admissible distribution is a unique finite linear combination of the $g_n$. In particular, the result exhausts the entire Meyer space associated with the constructed carrier; it is not merely the construction of countably many independent crystalline measures inside a larger space. Consequently, there is no universal finite-or-continuum dichotomy for the Hamel dimension of distributional Meyer spaces.
 
-\[
-T=\sum_{x\in\Lambda}a_x\delta_x,
-\qquad \widehat T=\sum_{x\in\Lambda}b_x\delta_x,
-\qquad \widehat f(\xi)=\int_{\mathbb R}f(x)e^{-2\pi ix\xi}\,dx.
-\]
-
-The sums here specify the action on **compactly supported tests**, where only
-finitely many terms occur. Temperedness is continuity on the entire Schwartz
-space. We do not impose a separate polynomial bound on the measures' total
-variation, or assert absolute convergence of these sums on every Schwartz
-test. Local finiteness makes these local atomic objects complex Radon
-measures; derivatives of point masses are excluded. Physical and Fourier
-supports are **contained** in Λ and need not fill it.
-
-The theorem produces one carrier and a family (gₙ)ₙ∈ℕ such that
-
-\[
-M_\Lambda\cong_{\mathbb C}\mathbb C^{(\mathbb N)},
-\qquad T\in M_\Lambda\iff
-\exists!c\in\mathbb C^{(\mathbb N)},\quad T=\sum_n c_n g_n.
-\]
-
-Here ℂ⁽ℕ⁾ denotes finitely supported sequences and dimension means algebraic
-(Hamel) dimension, not cardinality of the underlying set or topological
-dimension. The construction uses classical choice; no computable enumeration
-of its carrier or finite decision procedure is claimed.
+The construction assembles reciprocal, dilated high-order gap blocks at adaptively separated scales. Estimates in negative Hermite scales force every tempered element of the resulting space to involve only finitely many block lines, while disjoint spectral selectors establish independence of the generators. The atomic representations are understood locally on compactly supported tests; no additional polynomial bound on total variation is imposed. The principal theorem, including exhaustion and unique finite synthesis, has been formalised in Lean~4.
 
 ## Scope and research relevance
 
