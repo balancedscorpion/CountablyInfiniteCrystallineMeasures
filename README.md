@@ -1,17 +1,41 @@
 # Countably infinite crystalline-measure spaces
 
-Crystalline measures are atomic measures whose support and Fourier spectrum are both locally finite. They extend Poisson summation beyond periodic lattice combs and form part of Meyer's programme of understanding simultaneous discreteness in physical and Fourier space. Given a locally finite carrier $\Lambda\subset\mathbb R$, let $\mathcal M_\Lambda$ denote the complete complex vector space of tempered distributions for which both $T$ and its distributional Fourier transform are locally atomic with support contained in $\Lambda$. A basic structural question is which algebraic dimensions can occur for these carrier-defined spaces.
+Crystalline measures are atomic measures whose support and Fourier spectrum are
+both locally finite. They extend Poisson summation beyond periodic lattice combs
+and form part of Meyer's programme of understanding simultaneous discreteness in
+physical and Fourier space. Given a locally finite carrier
+$\Lambda\subset\mathbb R$, let $\mathcal M_\Lambda$ denote the complete complex
+vector space of tempered distributions for which both $T$ and its distributional
+Fourier transform are locally atomic with support contained in $\Lambda$. A
+basic structural question is which algebraic dimensions can occur for these
+carrier-defined spaces.
 
-We prove that countably infinite dimension occurs. More precisely, we construct a locally finite $\Lambda\subset\mathbb R$ and a sequence $(g_n)_{n\in\mathbb N}$ such that
+We prove that countably infinite dimension occurs. More precisely, we construct
+a locally finite $\Lambda\subset\mathbb R$ and a sequence
+$(g_n)_{n\in\mathbb N}$ such that
+
 $$
 \mathcal M_\Lambda
 =
 \bigoplus_{n\in\mathbb N}\mathbb C g_n
 \cong_{\mathbb C}\mathbb C^{(\mathbb N)}.
 $$
-Thus every admissible distribution is a unique finite linear combination of the $g_n$. In particular, the result exhausts the entire Meyer space associated with the constructed carrier; it is not merely the construction of countably many independent crystalline measures inside a larger space. Consequently, there is no universal finite-or-continuum dichotomy for the Hamel dimension of distributional Meyer spaces.
 
-The construction assembles reciprocal, dilated high-order gap blocks at adaptively separated scales. Estimates in negative Hermite scales force every tempered element of the resulting space to involve only finitely many block lines, while disjoint spectral selectors establish independence of the generators. The atomic representations are understood locally on compactly supported tests; no additional polynomial bound on total variation is imposed. The principal theorem, including exhaustion and unique finite synthesis, has been formalised in Lean~4.
+Thus every admissible distribution is a unique finite linear combination of the
+$g_n$. In particular, the result exhausts the entire Meyer space associated with
+the constructed carrier; it is not merely the construction of countably many
+independent crystalline measures inside a larger space. Consequently, there is
+no universal finite-or-continuum dichotomy for the Hamel dimension of
+distributional Meyer spaces.
+
+The construction assembles reciprocal, dilated high-order gap blocks at
+adaptively separated scales. Estimates in negative Hermite scales force every
+tempered element of the resulting space to involve only finitely many block
+lines, while disjoint spectral selectors establish independence of the
+generators. The atomic representations are understood locally on compactly
+supported tests; no additional polynomial bound on total variation is imposed.
+The principal theorem, including exhaustion and unique finite synthesis, has
+been formalised in Lean 4.
 
 ## Scope and research relevance
 
