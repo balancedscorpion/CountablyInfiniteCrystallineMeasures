@@ -14,12 +14,10 @@ We prove that countably infinite dimension occurs. More precisely, we construct
 a locally finite $\Lambda\subset\mathbb R$ and a sequence
 $(g_n)_{n\in\mathbb N}$ such that
 
-$$
-\mathcal M_\Lambda
-=
-\bigoplus_{n\in\mathbb N}\mathbb C g_n
+```math
+\mathcal M_\Lambda = \bigoplus_{n\in\mathbb N}\mathbb C g_n
 \cong_{\mathbb C}\mathbb C^{(\mathbb N)}.
-$$
+```
 
 Thus every admissible distribution is a unique finite linear combination of the
 $g_n$. In particular, the result exhausts the entire Meyer space associated with
