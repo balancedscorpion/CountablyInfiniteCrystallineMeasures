@@ -22,8 +22,11 @@ snapshot. The prepared workflow pins PalomarSubmission to
   classification, automation, review, scope and limitation metadata.
 - No submodules, LFS pointers, Lean-source symlinks or committed build outputs.
 
-`python3 scripts/check.py` checks the local repository conditions and the final
-theorem's axiom report. This is a preparation check, not the full Palomar
+`python3 scripts/check.py` checks the local repository conditions, compares the
+fully explicit theorem types elaborated separately from Challenge and Solution,
+and checks the final theorem's axiom report. The type comparison catches
+import-dependent instance differences but does not replace Comparator's full
+dependency comparison and kernel checks. This is a preparation check, not the full Palomar
 verifier. The root README explains the mathematical content, intended research
 audience, local atomic meaning, lack of a strong total-variation hypothesis,
 classical construction and absence of a novelty claim.

@@ -172,6 +172,18 @@ def main():
         return
 
     subprocess.run(["lake", "build", "Challenge", "Solution"], cwd=ROOT, check=True)
+    # Identical source text can elaborate differently under different imports.
+    # Compare fully explicit types in separate processes, since both modules
+    # deliberately declare the same names and cannot be imported together.
+    statement_types = []
+    for module in ("Challenge", "Solution"):
+        probe = ROOT / f".lake/{module}TypeAudit.lean"
+        probe.write_text(f"module\nimport {module}\nset_option pp.all true\n#check {THEOREM}\n")
+        result = subprocess.run(["lake", "env", "lean", str(probe)], cwd=ROOT,
+                                check=True, text=True, capture_output=True)
+        statement_types.append(result.stdout)
+    require(statement_types[0] == statement_types[1],
+            "Challenge and Solution elaborate to different explicit theorem types; run Comparator")
     audit = ROOT / ".lake/AxiomAudit.lean"
     audit.write_text(f"module\nimport Solution\n#print axioms {THEOREM}\n")
     result = subprocess.run(["lake", "env", "lean", str(audit)], cwd=ROOT,
@@ -183,7 +195,8 @@ def main():
     print(result.stdout.strip())
     subprocess.run(["git", "diff", "--check"], cwd=ROOT, check=True)
     print(f"PASS: {len(lean)} module sources; exact proof closure; pinned dependencies; "
-          "metadata and license shape; built theorem; standard axioms only.")
+          "metadata and license shape; matching explicit theorem types; "
+          "built theorem; standard axioms only.")
     print("This is a local preparation check, not Palomar's full mechanical verification.")
 
 

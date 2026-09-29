@@ -31,6 +31,10 @@ of helpers referenced by exposed definitions, and repairs for the newer
 library APIs. Private `import all` directives give the port explicit access to
 pinned library implementation details that the old non-module code unfolded.
 The new Challenge and Solution are publication interfaces.
+Solution locally disables the additional complex C*-algebra instance introduced
+by its proof imports, so both interfaces elaborate the topology on ℂ through
+the same normed-field instance. This changes no mathematical definition; it
+preserves the structural identity required by Comparator.
 
 | Publication object | Source correspondence |
 | --- | --- |

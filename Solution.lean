@@ -10,6 +10,11 @@ reciprocal-source synthesis theorem. This module does not import Challenge. -/
 noncomputable section
 namespace CountablyInfiniteCrystallineMeasures
 
+-- Match Challenge's normed-field route to the topology on ℂ. The broader proof
+-- imports also provide a C*-algebra route; Comparator requires identical terms.
+attribute [-instance] instCommCStarAlgebraComplex in
+section
+
 /-- Local finiteness: every bounded closed interval meets Λ in a finite set. -/
 def LocallyFinite (Λ : Set ℝ) : Prop :=
   ∀ a b : ℝ, (Λ ∩ Set.Icc a b).Finite
@@ -94,4 +99,5 @@ theorem exhaustiveCardinalClaim :
       rw [← Finsupp.range_linearCombination]
       exact ⟨c, rfl⟩
 
+end
 end CountablyInfiniteCrystallineMeasures
