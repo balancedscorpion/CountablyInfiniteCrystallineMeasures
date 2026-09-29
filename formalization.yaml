@@ -47,6 +47,29 @@
       "relationship": "background",
       "author_endorsement": "not-contacted",
       "note": "Background for the crystalline-measure problem. The precise distributional-tempered class of this submission is defined in Challenge and must not be silently identified with a stronger total-variation condition."
+    },
+    {
+      "title": "Measures with locally finite support and spectrum",
+      "authors": [
+        "Yves Meyer"
+      ],
+      "type": "paper",
+      "id": "doi:10.4171/RMI/962",
+      "relationship": "background",
+      "author_endorsement": "not-contacted",
+      "note": "Section 6 asks about the dimension of the complete space supported, together with its Fourier transform, on a common locally finite carrier. This motivates the occurrence result; no named finite-versus-continuum conjecture is attributed to the paper."
+    },
+    {
+      "title": "Quasicrystals with discrete support and spectrum",
+      "authors": [
+        "Nir Lev",
+        "Alexander Olevskii"
+      ],
+      "type": "paper",
+      "id": "doi:10.4171/RMI/920",
+      "relationship": "background",
+      "author_endorsement": "not-contacted",
+      "note": "Context for the distinction between uniformly discrete and locally finite supports: periodic rigidity in the former one-dimensional setting and nonperiodic examples in the latter. This is background, not a claim that the paper proves the complete-space dimension result."
     }
   ],
   "related_formalizations": [

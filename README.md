@@ -37,29 +37,78 @@ been formalised in Lean 4.
 
 ## Scope and research relevance
 
-This repository publishes only the exhaustive cardinal occurrence result
-from MeyerGeneralProblem's `target-cardinal-closure`. It supplies a
-countably infinite possibility between finite and continuum Hamel dimension,
-and disproves a universal finite/continuum dichotomy for this distributional
-space. Exhaustion is essential: infinitely many independent examples alone
-would not bound the dimension from above.
+In Section 6 of [*Measures with locally finite support and spectrum*
+(2017)](https://doi.org/10.4171/RMI/962), Yves Meyer asks about the dimension of
+$\mathcal M_\Lambda$, the space of atomic measures supported on a common carrier
+with their Fourier transforms. This sits alongside the distinction between
+uniformly discrete and merely locally finite supports: [Lev and Olevskii
+(2016)](https://doi.org/10.4171/RMI/920) establish nonperiodic examples in the
+latter setting, beyond the periodic structure forced by uniform discreteness
+of both support and spectrum in one dimension.
 
-The result is relevant to harmonic analysts studying simultaneous discrete
-physical and Fourier supports, crystalline measures, and the relation between
-growth conditions and algebraic dimension. It is not a geometric
-classification of all locally finite carriers, a universal carrier evaluator,
-a classification of shifted square-root sets, or a claim about the stronger
-space defined by polynomially controlled total variation. No systematic
-novelty search has been performed; novelty and priority are not claimed.
+The theorem here constructs a locally finite carrier $\Lambda\subset\mathbb R$
+whose complete distributionally tempered space satisfies
+
+```math
+\boxed{\dim_{\mathbb C}\mathcal M_\Lambda=\aleph_0.}
+```
+
+It provides a complete algebraic synthesis: every admissible distribution has a
+unique finite expansion in the constructed generators. This synthesis and the
+exact dimension are formalized in Lean 4.
+
+### Why exhaustion matters
+
+The distinction is between constructing independent sources and determining
+the complete source space:
+
+```math
+\text{countably many independent sources}
+\quad\not\Rightarrow\quad
+\dim_{\mathbb C}\mathcal M_\Lambda=\aleph_0.
+```
+
+Independence gives a lower bound. The analytic work is proving that **there are
+no additional sources** outside the finite generator span, including sources
+that could enlarge its dimension to the continuum. The result therefore rules
+out a universal finite-versus-continuum principle for these distributional
+spaces. This principle is not presented as a named published conjecture, and no
+claim of novelty or priority is made.
+
+### Structure across distributional orders
+
+Write $H_{-p}$ for the original negative Hermite scale, identified with its image
+in tempered distributions, and put $d_p=\dim_{\mathbb C}(\mathcal M_\Lambda\cap H_{-p})$.
+For the constructed carrier, the proof gives finite-dimensional layers whose
+dimensions are unbounded across orders:
+
+```math
+d_p<\infty\quad(p\in\mathbb N),
+\qquad
+\sup_{p\in\mathbb N}d_p=\infty.
+```
+
+At each positive order $p$, the finite-exhaustion argument confines every whole
+source to generator lines with positive block index below $6p$. Each finite
+collection of generators, in turn, belongs to some common Hermite order. Their
+independence makes the layer dimensions unbounded; the order-zero layer embeds
+in the order-one layer. Thus no fixed order contains infinitely many independent
+directions, although the union of the layers has countably infinite dimension.
+
+Distributional order therefore records information that the total dimension
+alone does not capture. The passage from finite exhaustion and independence to
+these layer consequences uses finite-dimensional linear algebra and the nested
+Hermite scales. The substantive construction proves the bounds and exhaustion
+for the complete space on this carrier. The scope remains this example and its
+complete synthesis, with local atomicity on both Fourier sides and no additional
+polynomial total-variation condition.
 
 ## The formal statement
 
 [`Challenge.lean`](Challenge.lean) is the small, independent Mathlib-only
 statement of record. Its definitions spell out local finiteness, local atomic
 action, the Fourier transform and the complete Meyer subspace.
-[`Solution.lean`](Solution.lean) proves the same declaration:
-
-`CountablyInfiniteCrystallineMeasures.exhaustiveCardinalClaim`
+[`Solution.lean`](Solution.lean) proves the same theorem.
 
 The declaration includes the equality of Hamel rank to ℵ₀, the equivalence of
 subspace membership with the two local atomic formulas, and the unique finite
@@ -82,10 +131,10 @@ coefficients proves countable Hamel dimension. Solution reindexes those
 labels by ℕ and proves the compact statement without any construction
 hypothesis.
 
-The internal namespace `MeyerGeneralProblem` is retained to make the
-extraction traceable. Only the recursive import closure of
-`Cardinal.Adaptive.ConstructedAlgebraicBasis` is included. The supporting
-Fourier, interpolation, sampling and Hilbert-space modules serve this proof;
+The original internal source paths are retained to make the extraction
+traceable. Only the recursive import closure of the complete synthesis theorem
+is included. The supporting Fourier, interpolation, sampling and Hilbert-space
+modules serve this proof;
 the original research archive, broader classifiers, and other publication
 entry points are not included. See [provenance](docs/PROVENANCE.md).
 
@@ -116,7 +165,7 @@ registration.
 Jamie Martin and Li Shen are the human authors; Jamie Martin is the
 responsible maintainer. This extracted snapshot is licensed under
 [MIT](LICENSE). The substantive proof comes from the pinned
-MeyerGeneralProblem development, with a module-system and dependency port
+source development, with a module-system and dependency port
 and a new Palomar interface. MeyerProblem was consulted as a publication
 layout reference for a different theorem; its mathematical result is not
 included. Exact citations and automation disclosures are in
